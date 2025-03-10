@@ -1,4 +1,4 @@
-declare const Logo: ({ size, href }: {
+declare const Logo: ({ size, href, }: {
     size?: number;
     href?: string;
 }) => import("react/jsx-runtime").JSX.Element;

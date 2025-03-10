@@ -1,160 +1,169 @@
-@import "./date-picker.css";
+@import './date-picker.css';
 
 body {
-    font-family: Poppins, Arial, Helvetica, sans-serif;
-    @apply text-sm text-gray-600 bg-gray-50;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  @apply text-sm text-gray-600 bg-gray-50;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Hide the number input spinner in Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 /* Optional: Style the input to ensure it looks consistent */
-input[type="number"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+input[type='number'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-
 
 /* static fonts */
 @font-face {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    src: url('../fonts/Poppins/Poppins-Regular.otf') format("opentype");
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Poppins/Poppins-Regular.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: Poppins;
-    font-weight: 100;
-    src: url('../fonts/Poppins/Poppins-Light.otf') format("opentype");
+  font-family: Poppins;
+  font-weight: 100;
+  src: url('../fonts/Poppins/Poppins-Light.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: Poppins;
-    font-weight: 500;
-    src: url('../fonts/Poppins/Poppins-Medium.otf') format("opentype");
+  font-family: Poppins;
+  font-weight: 500;
+  src: url('../fonts/Poppins/Poppins-Medium.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: Poppins;
-    font-style: italic;
-    font-weight: 100;
-    src: url('../fonts/Poppins/Poppins-Italic.otf') format("opentype");
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 100;
+  src: url('../fonts/Poppins/Poppins-Italic.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: Poppins;
-    font-weight: bold;
-    src: url('../fonts/Poppins/Poppins-Bold.otf') format("opentype");
+  font-family: Poppins;
+  font-weight: bold;
+  src: url('../fonts/Poppins/Poppins-Bold.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: Poppins;
-    font-weight: bold;
-    font-style: italic;
-    src: url('../fonts/Poppins/Poppins-BoldItalic.otf') format("opentype");
+  font-family: Poppins;
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/Poppins/Poppins-BoldItalic.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: Poppins;
-    font-weight: 900;
-    src: url('../fonts/Poppins/Poppins-ExtraBold.otf') format('opentype');
+  font-family: Poppins;
+  font-weight: 900;
+  src: url('../fonts/Poppins/Poppins-ExtraBold.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: Tommy;
-    src: url('../fonts/Tommy/MADE TOMMY Black.otf') format("opentype");
+  font-family: Tommy;
+  src: url('../fonts/Tommy/MADE TOMMY Black.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: 'Tommy';
-    font-weight: 700;
-    src: url('../fonts/Tommy/MADE TOMMY Bold.otf') format("opentype");
+  font-family: 'Tommy';
+  font-weight: 700;
+  src: url('../fonts/Tommy/MADE TOMMY Bold.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: 'Tommy';
-    font-weight: 900;
-    src: url('../fonts/Tommy/MADE TOMMY ExtraBold.otf') format("opentype");
+  font-family: 'Tommy';
+  font-weight: 900;
+  src: url('../fonts/Tommy/MADE TOMMY ExtraBold.otf')
+    format('opentype');
 }
 
 @font-face {
-    font-family: 'Tommy Outline';
-    src: url('../fonts/Tommy/MADE TOMMY Black Outline.otf') format("opentype");
+  font-family: 'Tommy Outline';
+  src: url('../fonts/Tommy/MADE TOMMY Black Outline.otf')
+    format('opentype');
 }
 
 .bg-grad {
-    background-image: linear-gradient(#D0F8AB, #fff);
+  background-image: linear-gradient(#d0f8ab, #fff);
 }
 
 a {
-    @apply cursor-pointer;
+  @apply cursor-pointer;
 }
 
 h1 {
-    @apply font-bold text-5xl text-gray-900 leading-11 ;
+  @apply font-bold text-5xl text-gray-900 leading-11;
 }
 
 h2 {
-    @apply font-bold text-4xl text-gray-900 my-2 lg:my-4;
+  @apply font-bold text-4xl text-gray-900 my-2 lg:my-4;
 }
 
 h3 {
-    @apply font-bold text-3xl text-gray-900;
+  @apply font-bold text-3xl text-gray-900;
 }
 
 h4 {
-    @apply font-bold text-lg text-gray-900;
+  @apply font-bold text-lg text-gray-900;
 }
 
 h5 {
-    @apply font-bold text-base text-gray-900;
+  @apply font-bold text-base text-gray-900;
 }
 
-
 .main {
-    @apply p-10 sm:p-16;
+  @apply p-10 sm:p-16;
 }
 
 .container {
-    @apply w-full sm:max-w-7xl sm:mx-auto px-3.5 md:px-6 xl:px-1.5;
+  @apply w-full sm:max-w-7xl sm:mx-auto px-3.5 md:px-6 xl:px-1.5;
 }
 
 .page {
-    @apply sm:max-w-7xl my-8 sm:my-16 xl:my-32 ;
+  @apply sm:max-w-7xl my-8 sm:my-16 xl:my-32;
 }
 
 .section {
-    @apply my-10 lg:my-16;
+  @apply my-10 lg:my-16;
 }
 
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in WebKit-based browsers */
+  display: none; /* Hides scrollbar in WebKit-based browsers */
 }
 
 /* For all browsers */
 .no-scrollbar {
-    -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
-    scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
 .dashboard-card {
-    @apply border p-3 md:p-6 rounded-lg shadow-sm;
+  @apply border p-3 md:p-6 rounded-lg shadow-sm;
 }
 
-input[type="file"] {
-    display: none;
+input[type='file'] {
+  display: none;
 }

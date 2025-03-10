@@ -19,7 +19,10 @@ import Table, { ITableProps } from '..';
 import fuzzyFilter from '../utils/fuzzyFilter';
 
 interface IProps<TData extends RowData>
-  extends Omit<ITableProps<TData>, 'table' | 'before' | 'after'> {
+  extends Omit<
+    ITableProps<TData>,
+    'table' | 'before' | 'after'
+  > {
   data: TData[];
   columns: ColumnDef<TData, any>[];
 
@@ -35,11 +38,14 @@ function MatchableSortableTable<TData extends RowData>({
                                                        }: IProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>([]);
 
-  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  const [columnFilters, setColumnFilters] =
+    useState<ColumnFiltersState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
 
   // @ts-expect-error error
-  const table: ReactTable<RowData> = useReactTable<TData, any>({
+  const table: ReactTable<RowData> = useReactTable<
+    TData
+  >({
     data,
     columns,
     filterFns: { fuzzy: fuzzyFilter },
@@ -61,12 +67,7 @@ function MatchableSortableTable<TData extends RowData>({
   //   setGlobalFilter(String(evt.target.value));
   // };
 
-  return (
-    <Table
-      table={table as any}
-      {...otherProps}
-    />
-  );
+  return <Table table={table as any} {...otherProps} />;
 }
 
 export type { IProps as IMatchableSortableTableProps };

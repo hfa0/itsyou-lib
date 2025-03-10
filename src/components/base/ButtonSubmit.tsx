@@ -1,9 +1,15 @@
-import React, { ButtonHTMLAttributes, PropsWithChildren, useState } from 'react';
+import React, {
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+  useState,
+} from 'react';
 import Button from './Button';
 import Modal from './Modal';
 
 interface Props
-  extends PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>> {
+  extends PropsWithChildren<
+    ButtonHTMLAttributes<HTMLButtonElement>
+  > {
   isLoading?: boolean;
   children?: string;
   errors?: any;
@@ -12,13 +18,13 @@ interface Props
 }
 
 const ButtonSubmit = ({
-                        children,
-                        onClick,
-                        className,
-                        styleType,
-                        type,
-                        ...rest
-                      }: Props) => {
+  children,
+  onClick,
+  className,
+  styleType,
+  type,
+  ...rest
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(true);
@@ -42,7 +48,10 @@ const ButtonSubmit = ({
       >
         <p className={'text-xl text-center'}>
           Are you sure you want to <br />{' '}
-          <strong className={'text-secondary'}>{children}</strong>?
+          <strong className={'text-secondary'}>
+            {children}
+          </strong>
+          ?
         </p>
         <div className={'flex space-x-6 justify-center'}>
           <Button

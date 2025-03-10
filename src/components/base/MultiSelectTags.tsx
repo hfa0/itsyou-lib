@@ -8,7 +8,9 @@ interface Props {
 }
 
 const MultiSelectTags = ({ tags, label }: Props) => {
-  const [state, setState] = useState<{ [id: string]: boolean }>({});
+  const [state, setState] = useState<{
+    [id: string]: boolean;
+  }>({});
   return (
     <InputWrapper label={label}>
       <div className={'space-x-2 flex'}>
@@ -17,7 +19,9 @@ const MultiSelectTags = ({ tags, label }: Props) => {
             key={tag.id}
             className={classNames(
               'border-2 border-gray-200 px-4 py-3 min-w-16 rounded-full text-gray-400 cursor-pointer font-semibold',
-              state[tag.id] ? 'text-gray-700 border-gray-700' : '',
+              state[tag.id]
+                ? 'text-gray-700 border-gray-700'
+                : '',
             )}
             onClick={() =>
               setState((s) => ({

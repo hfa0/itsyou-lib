@@ -1,9 +1,15 @@
-import React from "react"
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import LogoImg from "../../assets/logos/logo.png"
+import LogoImg from '../../assets/logos/logo.png';
 
-const Logo = ({ size, href }: { size?: number, href?: string }) => {
+const Logo = ({
+  size,
+  href,
+}: {
+  size?: number;
+  href?: string;
+}) => {
   return (
     <Link href={href || '/'} className="shrink-0">
       <Image

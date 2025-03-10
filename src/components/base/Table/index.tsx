@@ -35,11 +35,11 @@ interface IProps<T extends RowData> {
 }
 
 function Table<T extends RowData>({
-                                    table,
-                                    emptyMessage,
-                                    onRowClicked,
-                                    classes,
-                                  }: IProps<T>) {
+  table,
+  emptyMessage,
+  onRowClicked,
+  classes,
+}: IProps<T>) {
   const handleClickRow = useCallback(
     (rowData: T) => () => {
       onRowClicked?.(rowData);
@@ -78,69 +78,82 @@ function Table<T extends RowData>({
             >
               <table className="min-w-full divide-y divide-gray-200 relative">
                 <thead className="bg-gray-50 sticky top-0">
-                {table.getHeaderGroups().map((headerGroup) => (
-                  <tr
-                    key={headerGroup.id}
-                    className={classNames(classes?.tr, classes?.thr)}
-                  >
-                    {headerGroup.headers.map((header) => (
-                      <th
-                        scope="col"
-                        key={header.id}
+                  {table
+                    .getHeaderGroups()
+                    .map((headerGroup) => (
+                      <tr
+                        key={headerGroup.id}
                         className={classNames(
-                          classes?.th,
-                          'px-3 py-3.5 text-left text-sm font-semibold text-gray-500',
+                          classes?.tr,
+                          classes?.thr,
                         )}
-                        onClick={header.column.getToggleSortingHandler()}
                       >
-                        <div className="flex items-center gap-x-1.5">
-                          {header.isPlaceholder ? (
-                            <span
+                        {headerGroup.headers.map(
+                          (header) => (
+                            <th
+                              scope="col"
+                              key={header.id}
                               className={classNames(
-                                classes?.thPlaceholder,
-                                'sr-only',
+                                classes?.th,
+                                'px-3 py-3.5 text-left text-sm font-semibold text-gray-500',
                               )}
+                              onClick={header.column.getToggleSortingHandler()}
                             >
-                                {header.id}
-                              </span>
-                          ) : (
-                            flexRender(
-                              header.column.columnDef.header,
-                              header.getContext(),
-                            )
-                          )}
-                          {header.column.getCanSort() &&
-                            getSortingIcon(header.column.getIsSorted())}
-                        </div>
-                      </th>
+                              <div className="flex items-center gap-x-1.5">
+                                {header.isPlaceholder ? (
+                                  <span
+                                    className={classNames(
+                                      classes?.thPlaceholder,
+                                      'sr-only',
+                                    )}
+                                  >
+                                    {header.id}
+                                  </span>
+                                ) : (
+                                  flexRender(
+                                    header.column.columnDef
+                                      .header,
+                                    header.getContext(),
+                                  )
+                                )}
+                                {header.column.getCanSort() &&
+                                  getSortingIcon(
+                                    header.column.getIsSorted(),
+                                  )}
+                              </div>
+                            </th>
+                          ),
+                        )}
+                      </tr>
                     ))}
-                  </tr>
-                ))}
                 </thead>
                 <tbody className="bg-white">
-                {rows.map((row) => (
-                  <tr
-                    key={row.id}
-                    className={classNames(classes?.tr, classes?.tbr)}
-                    onClick={handleClickRow(row.original)}
-                  >
-                    {row.getVisibleCells().map((cell) => (
-                      <td
-                        key={cell.id}
-                        className={classNames(
-                          classes?.td,
-                          'whitespace-nowrap px-3 py-4 text-sm text-gray-500 ',
-                          'border-b',
-                        )}
-                      >
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext(),
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                  {rows.map((row) => (
+                    <tr
+                      key={row.id}
+                      className={classNames(
+                        classes?.tr,
+                        classes?.tbr,
+                      )}
+                      onClick={handleClickRow(row.original)}
+                    >
+                      {row.getVisibleCells().map((cell) => (
+                        <td
+                          key={cell.id}
+                          className={classNames(
+                            classes?.td,
+                            'whitespace-nowrap px-3 py-4 text-sm text-gray-500 ',
+                            'border-b',
+                          )}
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext(),
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
                 </tbody>
               </table>
               {!rows.length &&

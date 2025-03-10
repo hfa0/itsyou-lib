@@ -46,7 +46,10 @@ export default function Tabs({
                   buttonClassName,
                   'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
                   selected
-                    ? ['bg-white text-gray-900 shadow', selectedClassName]
+                    ? [
+                        'bg-white text-gray-900 shadow',
+                        selectedClassName,
+                      ]
                     : 'hover:bg-white/[0.12]',
                 )
               }

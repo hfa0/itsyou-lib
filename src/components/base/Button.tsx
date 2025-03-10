@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 import classNames from 'classnames/dedupe';
 import Link from 'next/link';
 import Icon, { IconType } from './Icon';
 import Loader from './Loader';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   filled?: boolean;
   styleType?: 'dark' | 'light';
   href?: string;
@@ -37,7 +38,10 @@ const Button = ({
           className,
           'w-full min-w-20 py-2 border-2 shadow-sm rounded-md font-medium',
 
-          { 'pointer-events-none': props.disabled || isLoading },
+          {
+            'pointer-events-none':
+              props.disabled || isLoading,
+          },
           { 'opacity-50': props.disabled },
           {
             'bg-primary text-white border-dark hover:bg-dark/80':
@@ -53,11 +57,23 @@ const Button = ({
           }
         >
           {isLoading ? (
-            <Loader color={styleType === 'dark' ? 'light' : 'dark'} />
+            <Loader
+              color={
+                styleType === 'dark' ? 'light' : 'dark'
+              }
+            />
           ) : (
             <>
-              {icon && <Icon className={iconClassName} size={15} name={icon} />}
-              <div className={'whitespace-nowrap'}>{children}</div>
+              {icon && (
+                <Icon
+                  className={iconClassName}
+                  size={15}
+                  name={icon}
+                />
+              )}
+              <div className={'whitespace-nowrap'}>
+                {children}
+              </div>
             </>
           )}
         </div>

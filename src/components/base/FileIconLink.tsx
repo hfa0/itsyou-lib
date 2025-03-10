@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Link from 'next/link';
 import classNames from 'classnames/dedupe';
 import Icon from './Icon';
@@ -21,9 +21,15 @@ const FileIconLink = ({
           'pointer-events-none opacity-50': !url,
         })}
       >
-        <div className={'flex flex-col items-center justify-center space-y-1'}>
+        <div
+          className={
+            'flex flex-col items-center justify-center space-y-1'
+          }
+        >
           <Icon name={type} />
-          <div className={'font-thin uppercase text-xs'}>{title}</div>
+          <div className={'font-thin uppercase text-xs'}>
+            {title}
+          </div>
         </div>
       </Link>
     </div>

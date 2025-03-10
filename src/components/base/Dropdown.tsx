@@ -1,5 +1,9 @@
 'use client';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, {
+  Fragment,
+  useEffect,
+  useState,
+} from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import classNames from 'classnames/dedupe';
 import { IItem } from '../../types';
@@ -46,7 +50,9 @@ function Dropdown({
       label={label}
       className={wrapperClassName}
     >
-      <Popover className={classNames('relative h-full w-full')}>
+      <Popover
+        className={classNames('relative h-full w-full')}
+      >
         {({ open, close }) => (
           <>
             <Popover.Button
@@ -85,7 +91,9 @@ function Dropdown({
                   <div className="relative bg-white p-3 rounded-sm shadow-lg ring-1 ring-black/5 space-y-1">
                     {items.map((item, i) =>
                       typeof item.label !== 'string' ? (
-                        <div key={item.id}>{item.label}</div>
+                        <div key={item.id}>
+                          {item.label}
+                        </div>
                       ) : (
                         <div
                           className={
@@ -95,7 +103,8 @@ function Dropdown({
                           onClick={() => {
                             setSelected(i);
                             onChangeDropdown?.(item);
-                            if (!disableCloseOnClick) close();
+                            if (!disableCloseOnClick)
+                              close();
                           }}
                         >
                           {item.labels?.length ? (
@@ -106,7 +115,10 @@ function Dropdown({
                               )}
                             >
                               {item.labels.map((l) => (
-                                <div key={l} className={'font-medium'}>
+                                <div
+                                  key={l}
+                                  className={'font-medium'}
+                                >
                                   {l}
                                 </div>
                               ))}

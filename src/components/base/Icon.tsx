@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import ChevronDown from '../../assets/icons/chevron-down.svg';
 import Close from '../../assets/icons/x-close.svg';
 import Menu from '../../assets/icons/menu-01.svg';

@@ -1,17 +1,29 @@
-import React, { forwardRef, InputHTMLAttributes, PropsWithChildren } from 'react';
+import React, {
+  forwardRef,
+  InputHTMLAttributes,
+  PropsWithChildren,
+} from 'react';
 import { Textarea as TextareaUi } from '@headlessui/react';
 import classNames from 'classnames/dedupe';
 import InputWrapper from './InputWrapper';
 
 interface Props
-  extends PropsWithChildren<InputHTMLAttributes<HTMLTextAreaElement>> {
+  extends PropsWithChildren<
+    InputHTMLAttributes<HTMLTextAreaElement>
+  > {
   label?: string;
   error?: string;
   wrapperClassName?: string;
 }
 
 const TextArea_ = (
-  { wrapperClassName, error, label, className, ...rest }: Props,
+  {
+    wrapperClassName,
+    error,
+    label,
+    className,
+    ...rest
+  }: Props,
   ref: any,
 ) => {
   return (

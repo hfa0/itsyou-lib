@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
 
 const Tooltip = ({
-                   title,
-                   children,
-                 }: {
+  title,
+  children,
+}: {
   title: string;
   children: ReactNode;
 }) => (

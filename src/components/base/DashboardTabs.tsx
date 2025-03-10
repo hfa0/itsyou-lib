@@ -21,5 +21,4 @@ const DashboardTabs = ({
   );
 };
 
-
-export default DashboardTabs
+export default DashboardTabs;

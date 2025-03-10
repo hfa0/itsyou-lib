@@ -3,21 +3,21 @@ import Datetime from 'react-datetime';
 import Input from './Input';
 
 const DatePicker = ({
-                      label,
-                      date,
-                      className,
-                      onChange,
-                      error,
-                    }: {
+  label,
+  date,
+  className,
+  onChange,
+  error,
+}: {
   label?: string;
   date?: Date;
   className?: string;
   onChange?: (date: Date) => void;
   error?: string;
 }) => {
-  const [startDate, setStartDate] = useState<Date | undefined>(
-    date || new Date(),
-  );
+  const [startDate, setStartDate] = useState<
+    Date | undefined
+  >(date || new Date());
 
   useEffect(() => {
     setStartDate(date);
@@ -31,7 +31,13 @@ const DatePicker = ({
   return (
     <Datetime
       renderInput={(props: any) => (
-        <Input {...props} error={error} label={label} className={className} icon={'Calendar'} />
+        <Input
+          {...props}
+          error={error}
+          label={label}
+          className={className}
+          icon={'Calendar'}
+        />
       )}
       initialValue={startDate}
       onChange={handleChange}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import MoonLoader from 'react-spinners/MoonLoader';
 
 const Loader = ({
@@ -12,7 +12,6 @@ const Loader = ({
     <MoonLoader
       size={size}
       color={color === 'dark' ? '#4A1FB8' : '#fff'}
-
     />
   );
 };

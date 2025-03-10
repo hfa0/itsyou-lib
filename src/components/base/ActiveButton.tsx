@@ -10,12 +10,12 @@ interface Props extends HTMLAttributes<HTMLButtonElement> {
 }
 
 const ActiveButton = ({
-                        children,
-                        active,
-                        wrapperClassName,
-                        className,
-                        ...props
-                      }: Props) => {
+  children,
+  active,
+  wrapperClassName,
+  className,
+  ...props
+}: Props) => {
   return (
     <Button
       {...props}
@@ -23,7 +23,9 @@ const ActiveButton = ({
       wrapperClassName={wrapperClassName}
       className={classNames(
         'font-semibold hover:bg-white hover:border-gray-700',
-        active ? '!text-gray-700 border-gray-700' : 'text-gray-400',
+        active
+          ? '!text-gray-700 border-gray-700'
+          : 'text-gray-400',
         className,
       )}
     >

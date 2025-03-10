@@ -14,13 +14,14 @@ export interface IItem {
   labels?: string[];
 }
 
-
-
 export type ImageField = {
   type?: string;
   file: Blob;
   url: string;
 };
 
-
-export type PersonalImage = { type: string; id: string; url: string };
+export type PersonalImage = {
+  type: string;
+  id: string;
+  url: string;
+};

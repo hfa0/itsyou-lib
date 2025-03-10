@@ -1,4 +1,9 @@
-import React, { Fragment, ReactNode, useEffect, useState } from 'react';
+import React, {
+  Fragment,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import classNames from 'classnames/dedupe';
 import Overlay, { IOverlayProps } from './Overlay';
@@ -52,7 +57,10 @@ function Modal(props: IProps) {
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
         as="div"
-        className={classNames(classes?.root, 'relative z-40')}
+        className={classNames(
+          classes?.root,
+          'relative z-40',
+        )}
         onClose={onClose}
       >
         <Overlay {...overlayProps} />
@@ -102,17 +110,29 @@ function Modal(props: IProps) {
                   'relative transform rounded-lg bg-white dark:bg-dark text-left shadow-xl ring-1 ring-onLight/50 dark:ring-onDark/50 transition-all sm:w-full sm:max-w-lg',
                 )}
               >
-                <div className={'flex justify-between border-b px-6 py-3'}>
-                  <h4 className={"text-2xl"}>{name}</h4>
+                <div
+                  className={
+                    'flex justify-between border-b px-6 py-3'
+                  }
+                >
+                  <h4 className={'text-2xl'}>{name}</h4>
                   <Icon
                     onClick={close}
                     size={30}
-                    className={'p-1 hover:bg-gray-50 cursor-pointer rounded'}
+                    className={
+                      'p-1 hover:bg-gray-50 cursor-pointer rounded'
+                    }
                     name={'Close'}
                   />
                 </div>
-                <div className={classNames(
-                  classes?.content,'px-4 pt-5 pb-4 sm:p-6')}>{children}</div>
+                <div
+                  className={classNames(
+                    classes?.content,
+                    'px-4 pt-5 pb-4 sm:p-6',
+                  )}
+                >
+                  {children}
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>

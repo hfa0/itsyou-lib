@@ -1,6 +1,11 @@
-import { FilterFn } from "@tanstack/react-table";
+import { FilterFn } from '@tanstack/react-table';
 
-export const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
+export const fuzzyFilter: FilterFn<any> = (
+  row,
+  columnId,
+  value,
+  addMeta,
+) => {
   // Rank the item
   const itemRank: any = row.getValue(columnId);
 

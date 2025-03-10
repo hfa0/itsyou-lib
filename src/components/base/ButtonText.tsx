@@ -1,11 +1,17 @@
 import Link from 'next/link';
-import React, { ButtonHTMLAttributes, PropsWithChildren, useState } from 'react';
+import React, {
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+  useState,
+} from 'react';
 import classNames from 'classnames/dedupe';
 import Button from './Button';
 import Modal from './Modal';
 
 interface Props
-  extends PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>> {
+  extends PropsWithChildren<
+    ButtonHTMLAttributes<HTMLButtonElement>
+  > {
   href?: string;
   isLoading?: boolean;
 }
@@ -47,7 +53,10 @@ const ButtonText = ({
       >
         <p className={'text-xl text-center'}>
           Are you sure you want to <br />{' '}
-          <strong className={'text-secondary'}>{children}</strong>?
+          <strong className={'text-secondary'}>
+            {children}
+          </strong>
+          ?
         </p>
         <div className={'flex space-x-6 justify-center'}>
           <Button
@@ -59,7 +68,10 @@ const ButtonText = ({
           >
             Yes
           </Button>
-          <Button styleType={'light'} onClick={() => setIsOpen(false)}>
+          <Button
+            styleType={'light'}
+            onClick={() => setIsOpen(false)}
+          >
             No
           </Button>
         </div>

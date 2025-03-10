@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 declare const map: {
     Upload: React.FC<React.SVGProps<SVGSVGElement>>;
     Eye: React.FC<React.SVGProps<SVGSVGElement>>;
