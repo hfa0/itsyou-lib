@@ -1,5 +1,7 @@
-declare const Logo: ({ size, href, }: {
+declare const Logo: ({ size, mode, className, href, }: {
     size?: number;
-    href?: string;
+    mode?: "black" | "white";
+    className?: string;
+    href: string;
 }) => import("react/jsx-runtime").JSX.Element;
 export default Logo;

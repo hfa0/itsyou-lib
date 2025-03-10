@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import LogoSvg from '../assets/logos/logo.svg';
+import LogoSvg from '../../assets/logos/logo.svg';
 import classNames from 'classnames/dedupe';
 
 const Logo = ({
