@@ -1,3 +1,4 @@
+import React from "react"
 import Link from 'next/link';
 import LogoSvg from '../../assets/logos/logo.svg';
 import classNames from 'classnames/dedupe';

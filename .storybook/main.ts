@@ -41,7 +41,7 @@ const config: StorybookConfig = {
     },
   ],
   'framework': {
-    'name': getAbsolutePath('@storybook/nextjs'),
+    'name': getAbsolutePath('@storybook/react-webpack5'),
     'options': {},
   },
   webpackFinal: async (config) => {
