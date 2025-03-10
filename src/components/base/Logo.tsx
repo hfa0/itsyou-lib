@@ -12,7 +12,7 @@ const Logo = ({
   size?: number;
   mode?: 'black' | 'white';
   className?: string;
-  href: string;
+  href?: string;
 }) => {
   return (
     <Link href={href || '/'} className="shrink-0">
@@ -20,7 +20,7 @@ const Logo = ({
         className={classNames(
           {
             'text-black': mode === 'black',
-            'text-white': mode === 'black',
+            'text-white': mode === 'white',
           },
           className,
         )}

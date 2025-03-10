@@ -28,7 +28,19 @@ type Story = StoryObj<typeof meta>;
 
 export const Small: Story = {
   args: {
-    size: 20,
-    label: 'Button',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 100,
+  },
+};
+
+export const White: Story = {
+  args: {
+    size: 100,
+    mode: "white",
+    className: "bg-black",
   },
 };

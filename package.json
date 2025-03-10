@@ -4,7 +4,6 @@
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "sideEffects": false,
   "types": "dist/index.d.ts",
   "browserslist": [
     ">0.2%",
