@@ -1,25 +1,31 @@
-import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import LogoImg from '../../assets/logos/logo.png';
+import LogoSvg from '../assets/logos/logo.svg';
+import classNames from 'classnames/dedupe';
 
 const Logo = ({
   size,
+  mode = 'black',
+  className,
   href,
 }: {
   size?: number;
-  href?: string;
+  mode?: 'black' | 'white';
+  className?: string;
+  href: string;
 }) => {
   return (
     <Link href={href || '/'} className="shrink-0">
-      <Image
+      <LogoSvg
+        className={classNames(
+          {
+            'text-black': mode === 'black',
+            'text-white': mode === 'black',
+          },
+          className,
+        )}
         width={size || 50}
-        height={size || 50}
-        src={LogoImg}
-        alt={'its you model agentur agency hostess'}
       />
     </Link>
   );
 };
-
 export default Logo;

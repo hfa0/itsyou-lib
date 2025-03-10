@@ -32,10 +32,10 @@ interface IProps<TData extends RowData>
 }
 
 function MatchableSortableTable<TData extends RowData>({
-                                                         data,
-                                                         columns,
-                                                         ...otherProps
-                                                       }: IProps<TData>) {
+  data,
+  columns,
+  ...otherProps
+}: IProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>([]);
 
   const [columnFilters, setColumnFilters] =
@@ -43,9 +43,7 @@ function MatchableSortableTable<TData extends RowData>({
   const [globalFilter, setGlobalFilter] = useState('');
 
   // @ts-expect-error error
-  const table: ReactTable<RowData> = useReactTable<
-    TData
-  >({
+  const table: ReactTable<RowData> = useReactTable<TData>({
     data,
     columns,
     filterFns: { fuzzy: fuzzyFilter },
