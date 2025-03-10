@@ -3,13 +3,15 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  entry: "./src/index.ts", // Main entry point
+  target: "browserslist", // Ensures Webpack does not try to run in Node.js
+  entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
     library: "@itsyou/ui",
     libraryTarget: "umd",
-    clean: true, // Clean `dist/` before building
+    clean: true,
+    globalObject: "typeof self !== 'undefined' ? self : this", // Fix for `self is not defined`
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"],
@@ -26,12 +28,12 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|webp)$/i,
-        type: "asset/resource",
-      },
-      {
         test: /\.svg$/,
         use: ["@svgr/webpack"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|webp)$/i,
+        type: "asset/resource",
       },
     ],
   },
@@ -41,9 +43,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "src/assets", to: "assets" }, // Copy `src/assets` to `dist/assets`
-      ],
+      patterns: [{ from: "src/assets", to: "assets" }],
     }),
   ],
 };

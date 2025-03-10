@@ -6,6 +6,11 @@
   "module": "dist/index.esm.js",
   "sideEffects": false,
   "types": "dist/index.d.ts",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "files": [
     "dist",
     "dist/assets"
