@@ -1,5 +1,5 @@
 export { default as ActiveButton } from './base/ActiveButton';
-export { default as Button } from './base/Button';
+export { default as Button, ButtonProps, } from './base/Button';
 export { default as ButtonIcon } from './base/ButtonIcon';
 export { default as ButtonSubmit } from './base/ButtonSubmit';
 export { default as ButtonText } from './base/ButtonText';
@@ -10,7 +10,7 @@ export { default as FileIconLink } from './base/FileIconLink';
 export { default as Icon } from './base/Icon';
 export { default as ImageFullView } from './base/ImageFullView';
 export { default as InfoTooltip } from './base/InfoTooltip';
-export { default as Input } from './base/Input';
+export { default as Input, InputProps } from './base/Input';
 export { default as InputWrapper } from './base/InputWrapper';
 export { default as LearnMoreButton } from './base/LearnMoreButton';
 export { default as Loader } from './base/Loader';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconType } from './Icon';
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     filled?: boolean;
     styleType?: 'dark' | 'light';
     href?: string;

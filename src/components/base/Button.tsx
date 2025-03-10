@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Icon, { IconType } from './Icon';
 import Loader from './Loader';
 
-interface ButtonProps
+export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   filled?: boolean;
   styleType?: 'dark' | 'light';

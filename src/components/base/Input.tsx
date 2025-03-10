@@ -7,7 +7,7 @@ import classNames from 'classnames/dedupe';
 import Icon, { IconType } from './Icon';
 import InputWrapper from './InputWrapper';
 
-interface Props
+export interface InputProps
   extends InputHTMLAttributes<HTMLInputElement> {
   icon?: IconType;
   wrapperClassName?: string;
@@ -24,7 +24,7 @@ function Input_(
     wrapperClassName,
     error,
     ...rest
-  }: Props,
+  }: InputProps,
   ref: React.Ref<HTMLInputElement>,
 ) {
   return (
