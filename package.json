@@ -2,15 +2,21 @@
   "name": "@itsyou/ui",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "tsc && pnpm copy-assets",
+    "build": "tsc --module CommonJS --outDir dist/cjs && tsc --module ESNext --outDir dist/esm && pnpm copy-assets",
     "copy-assets": "cp -R src/assets dist/assets",
     "prepublishOnly": "pnpm run build"
   },
