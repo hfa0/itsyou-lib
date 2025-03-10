@@ -71,7 +71,7 @@ const Button = ({
                   name={icon}
                 />
               )}
-              <div className={'whitespace-nowrap'}>
+              <div className={'whitespace-nowrap w-full'}>
                 {children}
               </div>
             </>
