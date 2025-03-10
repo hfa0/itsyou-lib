@@ -11,6 +11,7 @@ module.exports = {
     library: "@itsyou/ui",
     libraryTarget: "umd",
     clean: true,
+    publicPath: "/",
     globalObject: "typeof self !== 'undefined' ? self : this", // Fix for `self is not defined`
   },
   resolve: {
