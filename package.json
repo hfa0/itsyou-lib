@@ -16,8 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "tsc --module CommonJS --outDir dist/cjs && tsc --module ESNext --outDir dist/esm && pnpm copy-assets",
-    "copy-assets": "cp -R src/assets dist/assets",
+    "build": "webpack --config webpack.config.js",
     "prepublishOnly": "pnpm run build"
   },
   "keywords": [],
