@@ -1,3 +1,4 @@
+import React, { ReactNode, useState } from 'react';
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -13,7 +14,6 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import { Table as ReactTable } from '@tanstack/table-core';
-import { ReactNode, useState } from 'react';
 
 import Table, { ITableProps } from '..';
 import fuzzyFilter from '../utils/fuzzyFilter';
@@ -29,10 +29,10 @@ interface IProps<TData extends RowData>
 }
 
 function MatchableSortableTable<TData extends RowData>({
-  data,
-  columns,
-  ...otherProps
-}: IProps<TData>) {
+                                                         data,
+                                                         columns,
+                                                         ...otherProps
+                                                       }: IProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>([]);
 
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
