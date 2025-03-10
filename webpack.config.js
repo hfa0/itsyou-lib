@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -38,4 +39,11 @@ module.exports = {
     react: "react",
     "react-dom": "react-dom",
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "src/assets", to: "assets" }, // Copy `src/assets` to `dist/assets`
+      ],
+    }),
+  ],
 };

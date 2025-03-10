@@ -6,7 +6,10 @@
   "module": "dist/index.esm.js",
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "files": ["dist", "dist/assets"],
+  "files": [
+    "dist",
+    "dist/assets"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
@@ -36,6 +39,7 @@
     "@types/react-dom": "^18",
     "add": "^2.0.6",
     "autoprefixer": "^10.4.21",
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "playwright": "^1.51.0",
