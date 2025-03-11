@@ -1,5 +1,5 @@
 {
-  "name": "@itsyou/ui",
+  "name": "@itsyouagency/ui",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -23,7 +23,7 @@
     "publish": "npm publish --access public"
   },
   "keywords": [],
-  "author": "",
+  "author": "Husein Fakhir",
   "license": "ISC",
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.5",
