@@ -55,6 +55,9 @@ declare const map: {
     Maximize: React.FC<React.SVGProps<SVGSVGElement>>;
     Csv: React.FC<React.SVGProps<SVGSVGElement>>;
     UserCard: React.FC<React.SVGProps<SVGSVGElement>>;
+    Mobile: React.FC<React.SVGProps<SVGSVGElement>>;
+    PhoneCall: React.FC<React.SVGProps<SVGSVGElement>>;
+    Mail: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 export type IconType = keyof typeof map;
 interface Props extends React.SVGAttributes<SVGElement> {

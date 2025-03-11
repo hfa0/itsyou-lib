@@ -57,6 +57,10 @@ import Eye from '../../assets/icons/eye.svg';
 import Mobile from '../../assets/icons/phone-02.svg';
 import PhoneCall from '../../assets/icons/phone-call-01.svg';
 import Mail from '../../assets/icons/mail.svg';
+import Insta from '../../assets/icons/socials/insta.svg';
+import Whatsapp from '../../assets/icons/socials/whatsapp.svg';
+import Tiktok from '../../assets/icons/socials/tiktok.svg';
+import Fb from '../../assets/icons/socials/fb.svg';
 
 const map = {
   Upload,
@@ -117,6 +121,10 @@ const map = {
   Mobile,
   PhoneCall,
   Mail,
+  Insta,
+  Whatsapp,
+  Tiktok,
+  Fb,
 };
 export type IconType = keyof typeof map;
 
