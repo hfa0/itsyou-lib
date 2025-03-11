@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss';
 
-export default {
+const config: Partial<Config> = {
   theme: {
     extend: {
-      fontSize : {
+      fontSize: {
         '5xl': '2.8rem',
       },
       maxWidth: {
@@ -11,10 +11,10 @@ export default {
       },
       colors: {
         primary: '#121212',
-        dark: "#121212",
-        grey: "#2b2b2b",
-        light: "#f4f2ed",
-        secondary: "#cebd63",
+        dark: '#121212',
+        grey: '#2b2b2b',
+        light: '#f4f2ed',
+        secondary: '#cebd63',
         gray: {
           50: '#FAFAFA',
           200: '#E9EAEB',
@@ -44,8 +44,10 @@ export default {
       },
       lineHeight: {
         '11': '3.4rem',
-      }
+      },
     },
   },
   safelist: [/grid-cols-[0-9]/] as any,
-} satisfies Config;
+};
+
+export default config;
