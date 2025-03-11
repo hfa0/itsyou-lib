@@ -10,11 +10,11 @@ export default {
         '8xl': '96rem',
       },
       colors: {
-        primary: '#1a1a1a',
-        secondary: '#ec7969',
-        white: '#fff',
-        dark: '#0d0d0d',
-        light: '#e6e6e6',
+        primary: '#121212',
+        dark: "#121212",
+        grey: "#2b2b2b",
+        light: "#f4f2ed",
+        secondary: "#cebd63",
         gray: {
           50: '#FAFAFA',
           200: '#E9EAEB',
