@@ -54,6 +54,9 @@ import Csv from '../../assets/icons/csv.svg';
 import Upload from '../../assets/icons/upload-01.svg';
 import UserCard from '../../assets/icons/image-user.svg';
 import Eye from '../../assets/icons/eye.svg';
+import Mobile from '../../assets/icons/phone-02.svg';
+import PhoneCall from '../../assets/icons/phone-call-01.svg';
+import Mail from '../../assets/icons/mail.svg';
 
 const map = {
   Upload,
@@ -111,6 +114,9 @@ const map = {
   Maximize,
   Csv,
   UserCard,
+  Mobile,
+  PhoneCall,
+  Mail,
 };
 export type IconType = keyof typeof map;
 
