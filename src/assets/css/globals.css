@@ -2,7 +2,7 @@
 
 body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
-    @apply text-sm text-light bg-primary;
+    @apply text-sm text-light bg-primary tracking-wider;
 }
 
 input[type='number']::-webkit-outer-spin-button,
