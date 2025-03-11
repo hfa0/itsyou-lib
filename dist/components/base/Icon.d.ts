@@ -58,6 +58,10 @@ declare const map: {
     Mobile: React.FC<React.SVGProps<SVGSVGElement>>;
     PhoneCall: React.FC<React.SVGProps<SVGSVGElement>>;
     Mail: React.FC<React.SVGProps<SVGSVGElement>>;
+    Insta: React.FC<React.SVGProps<SVGSVGElement>>;
+    Whatsapp: React.FC<React.SVGProps<SVGSVGElement>>;
+    Tiktok: React.FC<React.SVGProps<SVGSVGElement>>;
+    Fb: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 export type IconType = keyof typeof map;
 interface Props extends React.SVGAttributes<SVGElement> {
