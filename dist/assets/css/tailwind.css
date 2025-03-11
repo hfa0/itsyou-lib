@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-  *,
-  ::before,
-  ::after {
-    @apply border-gray-200;
-  }
+    *,
+    ::before,
+    ::after {
+        @apply border-grey;
+    }
 }
 
