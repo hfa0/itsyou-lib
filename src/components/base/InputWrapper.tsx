@@ -15,6 +15,7 @@ const InputWrapper = ({
   error?: string;
   hideError?: boolean;
 }) => {
+  console.log(error);
   return (
     <div className={classNames('space-y-2', className)}>
       {label && (
