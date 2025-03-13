@@ -22,7 +22,7 @@ export { default as Overlay } from './base/Overlay';
 export { default as Paragraph } from './base/Paragraph';
 export { default as Tabs } from './base/Tabs';
 export { default as Tag } from './base/Tag';
-export { default as TextArea } from './base/TextArea';
+export { default as TextArea, TextAreaProps } from './base/TextArea';
 export { default as Tooltip } from './base/Tooltip';
 export { default as FileUploadDrag } from './base/FileUploadDrag';
 export { default as RadioGroup } from './base/RadioGroup';

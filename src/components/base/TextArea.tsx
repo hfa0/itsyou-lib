@@ -7,7 +7,7 @@ import { Textarea as TextareaUi } from '@headlessui/react';
 import classNames from 'classnames/dedupe';
 import InputWrapper from './InputWrapper';
 
-interface Props
+export interface TextAreaProps
   extends PropsWithChildren<
     InputHTMLAttributes<HTMLTextAreaElement>
   > {
@@ -23,14 +23,14 @@ const TextArea_ = (
     label,
     className,
     ...rest
-  }: Props,
+  }: TextAreaProps,
   ref: any,
 ) => {
   return (
     <InputWrapper
       className={wrapperClassName}
-      error={error}
       label={label}
+      hideError={true}
     >
       <TextareaUi
         ref={ref}
