@@ -61,9 +61,11 @@ import Insta from '../../assets/icons/socials/insta.svg';
 import Whatsapp from '../../assets/icons/socials/whatsapp.svg';
 import Tiktok from '../../assets/icons/socials/tiktok.svg';
 import Fb from '../../assets/icons/socials/fb.svg';
+import Camera from '../../assets/icons/camera-03.svg';
 
 const map = {
   Upload,
+  Camera,
   Eye,
   ChevronDown,
   Close,

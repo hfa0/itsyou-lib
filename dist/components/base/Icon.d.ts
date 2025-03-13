@@ -1,6 +1,7 @@
 import React from 'react';
 declare const map: {
     Upload: React.FC<React.SVGProps<SVGSVGElement>>;
+    Camera: React.FC<React.SVGProps<SVGSVGElement>>;
     Eye: React.FC<React.SVGProps<SVGSVGElement>>;
     ChevronDown: React.FC<React.SVGProps<SVGSVGElement>>;
     Close: React.FC<React.SVGProps<SVGSVGElement>>;

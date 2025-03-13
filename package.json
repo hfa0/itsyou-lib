@@ -1,6 +1,6 @@
 {
   "name": "@itsyouagency/ui",
-  "version": "1.6.0",
+  "version": "1.9.0",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -72,6 +72,7 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-datetime": "^3.3.1",
     "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-drag-drop-files": "^2.4.0",
     "react-spinners": "^0.14.1",
     "react-toastify": "^11.0.3"
   },

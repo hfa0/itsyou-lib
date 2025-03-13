@@ -42,7 +42,7 @@ const Button = ({
             'pointer-events-none':
               props.disabled || isLoading,
           },
-          { 'opacity-50': props.disabled },
+          { 'opacity-70': props.disabled },
           {
             'bg-primary text-white border-dark hover:bg-dark/80':
               styleType === 'dark',

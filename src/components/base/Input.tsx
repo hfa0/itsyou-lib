@@ -14,6 +14,7 @@ export interface InputProps
   label?: string;
   placeholder?: string;
   error?: string;
+  hideError?: boolean;
 }
 
 function Input_(
@@ -23,6 +24,7 @@ function Input_(
     label,
     wrapperClassName,
     error,
+    hideError,
     ...rest
   }: InputProps,
   ref: React.Ref<HTMLInputElement>,
@@ -32,6 +34,7 @@ function Input_(
       error={error}
       label={label}
       className={wrapperClassName}
+      hideError={hideError}
     >
       <div className={classNames('flex items-center')}>
         {icon && (

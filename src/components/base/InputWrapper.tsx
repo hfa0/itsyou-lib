@@ -18,7 +18,7 @@ const InputWrapper = ({
   return (
     <div className={classNames('space-y-2', className)}>
       {label && (
-        <label className={'text-gray-500 font-light'}>
+        <label className={'font-light'}>
           {label}
         </label>
       )}
