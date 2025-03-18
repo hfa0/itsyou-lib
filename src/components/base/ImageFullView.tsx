@@ -42,7 +42,7 @@ const ImageFullView = ({
 
         <Image
           src={imageUrl}
-          alt="Full View"
+          alt={'Full View'}
           width={800}
           height={600}
           className="rounded-lg max-w-full max-h-screen object-contain"
