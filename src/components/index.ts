@@ -8,7 +8,10 @@ export { default as ButtonSubmit } from './base/ButtonSubmit';
 export { default as ButtonText } from './base/ButtonText';
 export { default as DashboardTabs } from './base/DashboardTabs';
 export { default as DatePicker } from './base/DatePicker';
-export { default as Dropdown } from './base/Dropdown';
+export {
+  default as Dropdown,
+  DropdownProps,
+} from './base/Dropdown';
 export { default as FileIconLink } from './base/FileIconLink';
 export { default as Icon, IconType } from './base/Icon';
 export { default as ImageFullView } from './base/ImageFullView';
@@ -25,7 +28,10 @@ export { default as Overlay } from './base/Overlay';
 export { default as Paragraph } from './base/Paragraph';
 export { default as Tabs } from './base/Tabs';
 export { default as Tag } from './base/Tag';
-export { default as TextArea, TextAreaProps } from './base/TextArea';
+export {
+  default as TextArea,
+  TextAreaProps,
+} from './base/TextArea';
 export { default as Tooltip } from './base/Tooltip';
 export { default as FileUploadDrag } from './base/FileUploadDrag';
 export { default as RadioGroup } from './base/RadioGroup';

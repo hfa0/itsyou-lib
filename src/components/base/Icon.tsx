@@ -62,6 +62,7 @@ import Whatsapp from '../../assets/icons/socials/whatsapp.svg';
 import Tiktok from '../../assets/icons/socials/tiktok.svg';
 import Fb from '../../assets/icons/socials/fb.svg';
 import Camera from '../../assets/icons/camera-03.svg';
+import Refresh from '../../assets/icons/refresh-cw-05.svg';
 
 const map = {
   Upload,
@@ -127,6 +128,7 @@ const map = {
   Whatsapp,
   Tiktok,
   Fb,
+  Refresh,
 };
 export type IconType = keyof typeof map;
 
