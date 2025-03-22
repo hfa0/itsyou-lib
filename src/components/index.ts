@@ -7,7 +7,10 @@ export { default as ButtonIcon } from './base/ButtonIcon';
 export { default as ButtonSubmit } from './base/ButtonSubmit';
 export { default as ButtonText } from './base/ButtonText';
 export { default as DashboardTabs } from './base/DashboardTabs';
-export { default as DatePicker } from './base/DatePicker';
+export {
+  default as DatePicker,
+  DatePickerProps,
+} from './base/DatePicker';
 export {
   default as Dropdown,
   DropdownProps,
@@ -35,3 +38,7 @@ export {
 export { default as Tooltip } from './base/Tooltip';
 export { default as FileUploadDrag } from './base/FileUploadDrag';
 export { default as RadioGroup } from './base/RadioGroup';
+export {
+  default as MatchableSortableTable,
+  IMatchableSortableTableProps,
+} from './base/Table/MatchableSortableTable';

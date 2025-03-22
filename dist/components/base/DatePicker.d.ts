@@ -1,8 +1,9 @@
-declare const DatePicker: ({ label, date, className, onChange, error, }: {
+export type DatePickerProps = {
     label?: string;
     date?: Date;
     className?: string;
     onChange?: (date: Date) => void;
     error?: string;
-}) => import("react/jsx-runtime").JSX.Element;
+};
+declare const DatePicker: ({ label, date, className, onChange, error, }: DatePickerProps) => import("react/jsx-runtime").JSX.Element;
 export default DatePicker;

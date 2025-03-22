@@ -6,9 +6,15 @@ type Props = {
   icon: IconType;
   onClick?: () => void;
   href?: string;
+  target?: string;
 };
 
-const ButtonIcon = ({ icon, onClick, href }: Props) => {
+const ButtonIcon = ({
+  icon,
+  onClick,
+  href,
+  target,
+}: Props) => {
   const I = (
     <Icon
       size={28}
@@ -19,7 +25,12 @@ const ButtonIcon = ({ icon, onClick, href }: Props) => {
       onClick={onClick}
     />
   );
-  if (href) return <Link href={href}>{I}</Link>;
+  if (href)
+    return (
+      <Link target={target} href={href}>
+        {I}
+      </Link>
+    );
   return I;
 };
 

@@ -63,6 +63,8 @@ import Tiktok from '../../assets/icons/socials/tiktok.svg';
 import Fb from '../../assets/icons/socials/fb.svg';
 import Camera from '../../assets/icons/camera-03.svg';
 import Refresh from '../../assets/icons/refresh-cw-05.svg';
+import File from '../../assets/icons/file-02.svg';
+import Inbox from '../../assets/icons/inbox-01.svg';
 
 const map = {
   Upload,
@@ -129,6 +131,8 @@ const map = {
   Tiktok,
   Fb,
   Refresh,
+  File,
+  Inbox,
 };
 export type IconType = keyof typeof map;
 

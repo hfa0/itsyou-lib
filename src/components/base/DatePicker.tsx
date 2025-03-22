@@ -2,19 +2,21 @@ import React, { useEffect, useState } from 'react';
 import Datetime from 'react-datetime';
 import Input from './Input';
 
+export type DatePickerProps = {
+  label?: string;
+  date?: Date;
+  className?: string;
+  onChange?: (date: Date) => void;
+  error?: string;
+};
+
 const DatePicker = ({
   label,
   date,
   className,
   onChange,
   error,
-}: {
-  label?: string;
-  date?: Date;
-  className?: string;
-  onChange?: (date: Date) => void;
-  error?: string;
-}) => {
+}: DatePickerProps) => {
   const [startDate, setStartDate] = useState<
     Date | undefined
   >(date || new Date());

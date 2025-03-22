@@ -1,0 +1,75 @@
+/* static fonts */
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Poppins/Poppins-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 500;
+    src: url('../fonts/Poppins/Poppins-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: 100;
+    src: url('../fonts/Poppins/Poppins-Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: bold;
+    src: url('../fonts/Poppins/Poppins-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: bold;
+    font-style: italic;
+    src: url('../fonts/Poppins/Poppins-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 900;
+    src: url('../fonts/Poppins/Poppins-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Tommy;
+    src: url('../fonts/Tommy/MADE TOMMY Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tommy';
+    font-weight: 700;
+    src: url('../fonts/Tommy/MADE TOMMY Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tommy';
+    font-weight: 900;
+    src: url('../fonts/Tommy/MADE TOMMY ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tommy Outline';
+    src: url('../fonts/Tommy/MADE TOMMY Black Outline.otf') format('opentype');
+}
