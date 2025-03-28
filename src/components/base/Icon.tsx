@@ -67,9 +67,11 @@ import File from '../../assets/icons/file-02.svg';
 import Inbox from '../../assets/icons/inbox-01.svg';
 import Invoice from '../../assets/icons/file-06.svg';
 import Send from '../../assets/icons/send-01.svg';
+import Copy from '../../assets/icons/copy-07.svg';
 
 const map = {
   Upload,
+  Copy,
   Invoice,
   Send,
   Camera,

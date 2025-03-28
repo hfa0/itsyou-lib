@@ -1,6 +1,7 @@
 import React from 'react';
 declare const map: {
     Upload: React.FC<React.SVGProps<SVGSVGElement>>;
+    Copy: React.FC<React.SVGProps<SVGSVGElement>>;
     Invoice: React.FC<React.SVGProps<SVGSVGElement>>;
     Send: React.FC<React.SVGProps<SVGSVGElement>>;
     Camera: React.FC<React.SVGProps<SVGSVGElement>>;

@@ -59,6 +59,11 @@ function MatchableSortableTable<TData extends RowData>({
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
     getFacetedMinMaxValues: getFacetedMinMaxValues(),
+    initialState: {
+      pagination: {
+        pageSize: 1000,
+      },
+    },
   });
 
   // const handleSearchChange = (evt: ChangeEvent<HTMLInputElement>) => {
