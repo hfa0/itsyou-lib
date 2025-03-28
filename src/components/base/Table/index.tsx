@@ -95,7 +95,7 @@ function Table<T extends RowData>({
                               key={header.id}
                               className={classNames(
                                 classes?.th,
-                                'px-3 py-3.5 text-left text-sm font-semibold text-gray-500',
+                                'px-3 py-3.5 text-left text-sm font-semibold text-gray-500 whitespace-nowrap',
                               )}
                               onClick={header.column.getToggleSortingHandler()}
                             >

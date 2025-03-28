@@ -8,3 +8,4 @@ export declare const formatName: (user: {
 export declare const formatNumber: (num: number) => string;
 export declare const formatPriceReadable: (num: number, curr?: boolean) => string;
 export declare const formatPriceRounded: (num: number) => string;
+export declare const formatDateShort: (date: string | Date | number) => string;

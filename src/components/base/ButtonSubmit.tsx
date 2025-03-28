@@ -15,6 +15,8 @@ interface Props
   errors?: any;
   className?: string;
   styleType?: 'dark' | 'light';
+  Element?: any;
+  action?: string;
 }
 
 const ButtonSubmit = ({
@@ -23,6 +25,8 @@ const ButtonSubmit = ({
   className,
   styleType,
   type,
+  action,
+  Element = Button,
   ...rest
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +35,7 @@ const ButtonSubmit = ({
   };
   return (
     <>
-      <Button
+      <Element
         {...rest}
         type={'button'}
         className={className}
@@ -39,7 +43,7 @@ const ButtonSubmit = ({
         onClick={handleClick}
       >
         {children}
-      </Button>
+      </Element>
       <Modal
         name={'Confirmation'}
         open={isOpen}
@@ -49,7 +53,7 @@ const ButtonSubmit = ({
         <p className={'text-xl text-center'}>
           Are you sure you want to <br />{' '}
           <strong className={'text-secondary'}>
-            {children}
+            {action || children}
           </strong>
           ?
         </p>

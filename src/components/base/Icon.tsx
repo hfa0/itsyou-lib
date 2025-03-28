@@ -65,9 +65,13 @@ import Camera from '../../assets/icons/camera-03.svg';
 import Refresh from '../../assets/icons/refresh-cw-05.svg';
 import File from '../../assets/icons/file-02.svg';
 import Inbox from '../../assets/icons/inbox-01.svg';
+import Invoice from '../../assets/icons/file-06.svg';
+import Send from '../../assets/icons/send-01.svg';
 
 const map = {
   Upload,
+  Invoice,
+  Send,
   Camera,
   Eye,
   ChevronDown,
