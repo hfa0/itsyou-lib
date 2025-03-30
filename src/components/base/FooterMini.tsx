@@ -4,13 +4,12 @@ function FooterMini() {
     <div className={'py-2 sm:py-4 w-full border-t'}>
       <div
         className={
-          'w-full max-w-7xl mx-auto flex flex-col-reverse items-center gap-y-3 sm:flex-row sm:justify-between'
+          'w-full max-w-7xl mx-auto flex flex-col-reverse items-center sm:flex-row sm:justify-between'
         }
       >
         <span className={'text-gray-500'}>
-          © 2025 itsyou.agency. All rights reserved.
+          © 2025 itsyou.agency.
         </span>
-        <div className={'flex space-x-5'}></div>
       </div>
     </div>
   );
