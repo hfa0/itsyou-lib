@@ -20,13 +20,14 @@ const ImageFullView = ({
   }
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50"
       onClick={onClose}
     >
-      <div className="relative">
+      <div className="">
         <Icon
           name="Close"
-          className="absolute top-4 right-4 bg-white text-black rounded-full p-1 text-lg cursor-pointer"
+          size={36}
+          className="absolute top-4 right-4 bg-white text-black rounded-full p-1 text-lg cursor-pointer hover:bg-gray-50"
           onClick={(e) => {
             e.stopPropagation();
             onClose?.();
@@ -35,19 +36,20 @@ const ImageFullView = ({
 
         {/* Full-screen image loader */}
         {loading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="absolute inset-0 flex items-center justify-center ">
             <Loader />
           </div>
         )}
-
-        <Image
-          src={imageUrl}
-          alt={'Full View'}
-          width={800}
-          height={600}
-          className="rounded-lg max-w-full max-h-screen object-contain"
-          onLoad={handleImageLoad}
-        />
+        <div className="w-full ">
+          <Image
+            src={imageUrl}
+            alt={'Full View'}
+            height={1000}
+            width={1000}
+            className="object-contain min-h-screen max-h-screen min-w-screen max-w-screen"
+            onLoad={handleImageLoad}
+          />
+        </div>
       </div>
     </div>
   );

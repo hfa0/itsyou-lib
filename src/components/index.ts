@@ -21,6 +21,7 @@ export { default as ImageFullView } from './base/ImageFullView';
 export { default as InfoTooltip } from './base/InfoTooltip';
 export { default as Input, InputProps } from './base/Input';
 export { default as InputWrapper } from './base/InputWrapper';
+export { default as IconButton } from './base/IconButton';
 export { default as LearnMoreButton } from './base/LearnMoreButton';
 export { default as Loader } from './base/Loader';
 export { default as Logo } from './base/Logo';
@@ -42,3 +43,4 @@ export {
   default as MatchableSortableTable,
   IMatchableSortableTableProps,
 } from './base/Table/MatchableSortableTable';
+export { TDashboardNav } from './base/DashboardNav';

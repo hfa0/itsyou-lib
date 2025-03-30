@@ -67,7 +67,7 @@ const Button = ({
               {icon && (
                 <Icon
                   className={iconClassName}
-                  size={15}
+                  size={20}
                   name={icon}
                 />
               )}

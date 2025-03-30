@@ -35,6 +35,20 @@
 
 @font-face {
     font-family: Poppins;
+    font-weight: 600;
+    src: url('../fonts/Poppins/Poppins-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: italic;
+    src: url('../fonts/Poppins/Poppins-SemiBoldItalic.otf') format('opentype');
+}
+
+
+@font-face {
+    font-family: Poppins;
     font-weight: bold;
     src: url('../fonts/Poppins/Poppins-Bold.otf') format('opentype');
 }

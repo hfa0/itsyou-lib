@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Icon, { IconType } from './Icon';
 import Loader from './Loader';
 
-const ButtonIcon = ({
+const IconButton = ({
   onClick,
   icon,
   isLoading,
@@ -26,7 +26,7 @@ const ButtonIcon = ({
     <div
       onClick={onClick}
       className={classNames(
-        'flex items-center justify-center w-9 h-9 border p-2 rounded hover:bg-gray-50/70 cursor-pointer shadow-sm text-gray-600',
+        'flex items-center justify-center w-9 h-9 border p-2 rounded hover:bg-gray-50 cursor-pointer shadow-sm text-gray-600 bg-white',
         {
           'pointer-events-none ': disabled || isLoading,
           'opacity-70': disabled,
@@ -49,4 +49,4 @@ const ButtonIcon = ({
   return Comp;
 };
 
-export default ButtonIcon;
+export default IconButton;

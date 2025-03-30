@@ -12,10 +12,17 @@ module.exports = {
     libraryTarget: 'umd',
     clean: true,
     publicPath: '/',
-    globalObject: 'typeof self !== \'undefined\' ? self : this', // Fix for `self is not defined`
+    globalObject:
+      "typeof self !== 'undefined' ? self : this", // Fix for `self is not defined`
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
+    fallback: {
+      fs: false,
+      path: require.resolve('path-browserify'),
+      stream: require.resolve('stream-browserify'),
+      buffer: require.resolve('buffer/'),
+    },
   },
   module: {
     rules: [
@@ -44,7 +51,13 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin({
-      patterns: [{ from: 'src/assets', to: 'assets' }, { from: 'tailwind.base.config.ts', to: 'tailwind.base.config.ts' }],
+      patterns: [
+        { from: 'src/assets', to: 'assets' },
+        {
+          from: 'tailwind.base.config.ts',
+          to: 'tailwind.base.config.ts',
+        },
+      ],
     }),
   ],
 };

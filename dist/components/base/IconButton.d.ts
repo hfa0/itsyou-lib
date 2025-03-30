@@ -1,6 +1,6 @@
 import { HTMLAttributeAnchorTarget, MouseEventHandler } from 'react';
 import { IconType } from './Icon';
-declare const ButtonIcon: ({ onClick, icon, isLoading, href, target, disabled, }: {
+declare const IconButton: ({ onClick, icon, isLoading, href, target, disabled, }: {
     onClick?: MouseEventHandler<HTMLDivElement>;
     isLoading?: boolean;
     icon: IconType;
@@ -8,4 +8,4 @@ declare const ButtonIcon: ({ onClick, icon, isLoading, href, target, disabled, }
     target?: string;
     disabled?: boolean;
 }) => import("react/jsx-runtime").JSX.Element;
-export default ButtonIcon;
+export default IconButton;

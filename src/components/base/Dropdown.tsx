@@ -23,6 +23,8 @@ export interface DropdownProps {
   defaultValue?: number;
   error?: string;
   hideError?: boolean;
+  placeholder?: string;
+  selectedClassName?: string;
 }
 
 function Dropdown({
@@ -38,6 +40,7 @@ function Dropdown({
   title,
   error,
   hideError,
+  selectedClassName,
 }: DropdownProps) {
   const [selected, setSelected] = useState(defaultValue);
   useEffect(() => {
@@ -88,7 +91,7 @@ function Dropdown({
                 )}
               >
                 <div className="min-w-52">
-                  <div className="relative bg-white p-3 rounded-sm shadow-lg ring-1 ring-black/5 space-y-1">
+                  <div className="relative bg-white p-3 rounded-sm shadow-lg ring-1 ring-black/5 space-y-1 max-h-72 overflow-y-scroll">
                     {items.map((item, i) =>
                       typeof item.label !== 'string' ? (
                         <div key={item.id}>
@@ -96,9 +99,16 @@ function Dropdown({
                         </div>
                       ) : (
                         <div
-                          className={
-                            'px-4 py-3 hover:bg-gray-50 cursor-pointer rounded-sm'
-                          }
+                          className={classNames(
+                            'px-4 py-3 hover:bg-gray-50 cursor-pointer rounded-sm',
+                            {
+                              'bg-gray-100': i === selected,
+                            },
+                            {
+                              [selectedClassName]:
+                                i === selected,
+                            },
+                          )}
                           key={item.id}
                           onClick={() => {
                             setSelected(i);
@@ -124,7 +134,11 @@ function Dropdown({
                               ))}
                             </div>
                           ) : (
-                            <div className="block text-gray-700 font-medium">
+                            <div
+                              className={classNames(
+                                'block text-gray-700 font-medium',
+                              )}
+                            >
                               {item.label}
                             </div>
                           )}

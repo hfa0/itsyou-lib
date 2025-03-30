@@ -12,6 +12,8 @@ export interface DropdownProps {
     defaultValue?: number;
     error?: string;
     hideError?: boolean;
+    placeholder?: string;
+    selectedClassName?: string;
 }
-declare function Dropdown({ items, className, label, right, wrapperClassName, onChangeDropdown, defaultValue, unset, disableCloseOnClick, title, error, hideError, }: DropdownProps): import("react/jsx-runtime").JSX.Element;
+declare function Dropdown({ items, className, label, right, wrapperClassName, onChangeDropdown, defaultValue, unset, disableCloseOnClick, title, error, hideError, selectedClassName, }: DropdownProps): import("react/jsx-runtime").JSX.Element;
 export default Dropdown;
