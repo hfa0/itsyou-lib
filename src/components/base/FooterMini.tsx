@@ -8,7 +8,7 @@ function FooterMini() {
         }
       >
         <span className={'text-gray-500'}>
-          © 2025 itsyou.agency.
+          © 2025 itsyou.agency
         </span>
       </div>
     </div>
