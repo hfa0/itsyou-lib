@@ -118,3 +118,8 @@ export const PERSONAL_TYPES = [
   { label: 'Model', id: 'Model' },
   { label: 'Hostess', id: 'Hostess' },
 ];
+
+export const GENDERS = [
+  { label: 'Female', id: 'Female' },
+  { label: 'Male', id: 'Male' },
+]
