@@ -25,3 +25,7 @@ export declare const PERSONAL_TYPES: {
     label: string;
     id: string;
 }[];
+export declare const GENDERS: {
+    label: string;
+    id: string;
+}[];
