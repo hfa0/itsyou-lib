@@ -39,7 +39,7 @@ function InfoTooltip({
         >
           <div
             className={
-              'bg-white min-w-52 min-h-60 p-4 max-h-72 border shadow-lg rounded-lg font-medium text-gray-600 overflow-y-scroll'
+              'min-w-44 max-w-72 min-h-60 max-h-72 flex flex-col'
             }
           >
             {children}

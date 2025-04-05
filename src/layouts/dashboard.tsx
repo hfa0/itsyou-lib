@@ -26,7 +26,7 @@ export default function DashboardLayout({
   const routes = getNestedRoute(nav, currentPath);
   const [selectedRoute] = routes;
   return (
-    <div className={'bg-white w-screen'}>
+    <div className={'w-screen'}>
       <MobileSideBar
         open={sidebarOpen}
         setOpen={setSidebarOpen}
@@ -60,7 +60,7 @@ export default function DashboardLayout({
 
         <div className="flex w-full xl:max-w-8xl xl:mx-auto flex-grow xl:border-r xl:border-l">
           <div className="hidden xl:block xl:w-1/6">
-            <div className="flex flex-col gap-y-5 overflow-y-auto px-6 border-r h-full">
+            <div className="flex flex-col gap-y-5 overflow-y-auto px-6 border-r h-full bg-white">
               <div className="flex h-16 shrink-0 items-center">
                 <Logo />
               </div>
@@ -70,10 +70,10 @@ export default function DashboardLayout({
               />
             </div>
           </div>
-          <main className="bg-white w-full xl:w-5/6 xl:pb-6 flex flex-col">
+          <main className="bg-white w-full xl:w-5/6 flex flex-col">
             <div
               className={
-                'sticky top-0 py-3 flex items-center space-x-2 bg-white border-b px-3 md:px-6 z-10'
+                'sticky top-0 py-3 flex items-center space-x-2 bg-white border-b px-3 md:px-6 z-30'
               }
             >
               {/*<Icon className={"text-gray-500"} name={selectedRoute().icon}/>*/}
@@ -94,7 +94,7 @@ export default function DashboardLayout({
             <div
               className={classNames(
                 contentClassName,
-                'w-full p-3 xl:p-6 flex-grow flex flex-col overflow-y-scroll no-scrollbar ',
+                'w-full p-3 xl:p-6 flex-grow flex flex-col overflow-y-scroll no-scrollbar',
               )}
             >
               {children}

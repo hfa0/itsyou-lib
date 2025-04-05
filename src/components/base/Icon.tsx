@@ -69,6 +69,7 @@ import Invoice from '../../assets/icons/file-06.svg';
 import Send from '../../assets/icons/send-01.svg';
 import Copy from '../../assets/icons/copy-07.svg';
 import User from '../../assets/icons/user-01.svg';
+import Hourglass from '../../assets/icons/hourglass-03.svg';
 
 const map = {
   Upload,
@@ -141,7 +142,9 @@ const map = {
   Refresh,
   File,
   Inbox,
+  Hourglass,
 };
+
 export type IconType = keyof typeof map;
 
 interface Props extends React.SVGAttributes<SVGElement> {

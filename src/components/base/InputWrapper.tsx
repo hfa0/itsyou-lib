@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames/dedupe';
 import Icon from './Icon';
+import { InfoTooltip, Tooltip } from '../index';
 
 const InputWrapper = ({
   label,
@@ -8,20 +9,46 @@ const InputWrapper = ({
   className,
   error,
   hideError,
+  info,
+  toolTipWrapperClassName,
+  toolTipHeaderClassName,
+  toolTipContentClassName,
 }: {
   children: ReactNode;
   label?: string;
   className?: string;
   error?: string;
   hideError?: boolean;
+  info?: { title: string; toolTip: ReactNode };
+  toolTipHeaderClassName?: string;
+  toolTipWrapperClassName?: string;
+  toolTipContentClassName?: string;
 }) => {
   return (
     <div className={classNames('space-y-2', className)}>
-      {label && (
-        <label className={'font-light'}>
-          {label}
-        </label>
-      )}
+      <div className={'flex space-x-1.5'}>
+        {label !== undefined && label !== null && (
+          <label className={'font-light'}>{label}</label>
+        )}
+        {info && (
+          <InfoTooltip size={16} anchor={'top start'}>
+            <Tooltip
+              title={info.title}
+              wrapperClassName={toolTipWrapperClassName}
+              headerClassName={toolTipHeaderClassName}
+            >
+              <div
+                className={classNames(
+                  toolTipContentClassName,
+                  'font-light',
+                )}
+              >
+                {info.toolTip}
+              </div>
+            </Tooltip>
+          </InfoTooltip>
+        )}
+      </div>
       <div className={'space-y-1'}>
         {children}
         {!hideError && (

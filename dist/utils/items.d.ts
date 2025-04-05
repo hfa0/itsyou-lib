@@ -16,6 +16,7 @@ export declare const REQUEST_CONTRACTS: {
 export declare const REGISTRATION_CONTRACTS: {
     label: string;
     id: string;
+    de: string;
 }[];
 export declare const COUNTRIES: {
     label: string;

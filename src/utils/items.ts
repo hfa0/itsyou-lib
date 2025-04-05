@@ -99,12 +99,14 @@ export const REQUEST_CONTRACTS = [
 
 export const REGISTRATION_CONTRACTS = [
   {
-    label: 'Model Registration',
-    id: 'REGISTRATION_MODEL_A',
+    label: 'Mother-Agency Model Registration',
+    id: 'REGISTRATION_MOTHER_AGENCY',
+    de: 'Mutteragentur Vertrag',
   },
   {
-    label: 'Model Mother Agency',
-    id: 'REGISTRATION_MOTHER_AGENCY',
+    label: 'Freelance-Model Registration',
+    id: 'REGISTRATION_MODEL_A',
+    de: 'Freelance-Model Vertrag',
   },
 ];
 
@@ -122,4 +124,4 @@ export const PERSONAL_TYPES = [
 export const GENDERS = [
   { label: 'Female', id: 'Female' },
   { label: 'Male', id: 'Male' },
-]
+];
