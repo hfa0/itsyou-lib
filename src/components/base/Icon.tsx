@@ -70,9 +70,11 @@ import Send from '../../assets/icons/send-01.svg';
 import Copy from '../../assets/icons/copy-07.svg';
 import User from '../../assets/icons/user-01.svg';
 import Hourglass from '../../assets/icons/hourglass-03.svg';
+import Download from '../../assets/icons/download-01.svg';
 
 const map = {
   Upload,
+  Download,
   User,
   Copy,
   Invoice,
