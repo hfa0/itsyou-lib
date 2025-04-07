@@ -72,6 +72,7 @@ declare const map: {
     File: React.FC<React.SVGProps<SVGSVGElement>>;
     Inbox: React.FC<React.SVGProps<SVGSVGElement>>;
     Hourglass: React.FC<React.SVGProps<SVGSVGElement>>;
+    Filter: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 export type IconType = keyof typeof map;
 interface Props extends React.SVGAttributes<SVGElement> {

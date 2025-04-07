@@ -125,3 +125,23 @@ export const GENDERS = [
   { label: 'Female', id: 'Female' },
   { label: 'Male', id: 'Male' },
 ];
+
+export const JOB_TYPES = [
+  { label: 'Model', id: 'Model' },
+  { label: 'Hostess', id: 'Hostess' },
+];
+
+export const LOCATIONS = [
+  { label: 'Berlin', id: 'berlin' },
+  { label: 'Düsseldorf', id: 'düsseldorf' },
+  { label: 'Hamburg', id: 'hamburg' },
+  { label: 'München', id: 'münchen' },
+  { label: 'Frankfurt', id: 'frankfurt' },
+  { label: 'Köln', id: 'köln' },
+  { label: 'Stuttgart', id: 'stuttgart' },
+  { label: 'Leipzig', id: 'leipzig' },
+  { label: 'Nürnberg', id: 'nürnberg' },
+  { label: 'Hannover', id: 'hannover' },
+  { label: 'Essen', id: 'essen' },
+  { label: 'Dortmund', id: 'dortmund' },
+];

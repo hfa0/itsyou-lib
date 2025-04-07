@@ -30,3 +30,11 @@ export declare const GENDERS: {
     label: string;
     id: string;
 }[];
+export declare const JOB_TYPES: {
+    label: string;
+    id: string;
+}[];
+export declare const LOCATIONS: {
+    label: string;
+    id: string;
+}[];

@@ -71,6 +71,7 @@ import Copy from '../../assets/icons/copy-07.svg';
 import User from '../../assets/icons/user-01.svg';
 import Hourglass from '../../assets/icons/hourglass-03.svg';
 import Download from '../../assets/icons/download-01.svg';
+import Filter from '../../assets/icons/settings-03.svg';
 
 const map = {
   Upload,
@@ -145,6 +146,7 @@ const map = {
   File,
   Inbox,
   Hourglass,
+  Filter,
 };
 
 export type IconType = keyof typeof map;
