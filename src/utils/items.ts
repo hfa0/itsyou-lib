@@ -49,7 +49,6 @@ export const PHOTO_TYPES: IItem[] = [
     label: 'Fashion',
     id: 'fashion',
   },
-
   {
     label: 'Miscellaneous',
     id: 'miscellaneous',
