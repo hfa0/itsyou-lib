@@ -73,11 +73,11 @@ function Table<T extends RowData>({
             <div
               className={classNames(
                 classes?.tableWrapper,
-                'shadow ring-1 ring-black/5 rounded-lg overflow-y-auto h-[300px]',
+                'shadow ring-1 ring-black/5 rounded-md overflow-y-auto h-[300px] bg-white',
               )}
             >
               <table className="min-w-full divide-y divide-gray-200 relative">
-                <thead className="bg-gray-50 sticky top-0">
+                <thead className="bg-gray-50 sticky top-0 border-b">
                   {table
                     .getHeaderGroups()
                     .map((headerGroup) => (
@@ -95,7 +95,7 @@ function Table<T extends RowData>({
                               key={header.id}
                               className={classNames(
                                 classes?.th,
-                                'p-1.5 ld:px-3 lg:py-3.5 text-left text-xs lg:text-sm font-semibold text-gray-500 whitespace-nowrap',
+                                'px-1.5 ld:px-3 py-3 text-left text-xs font-semibold text-gray-500 whitespace-nowrap',
                               )}
                               onClick={header.column.getToggleSortingHandler()}
                             >
@@ -142,7 +142,7 @@ function Table<T extends RowData>({
                           key={cell.id}
                           className={classNames(
                             classes?.td,
-                            'whitespace-nowrap p-1.5 lg:px-3 lg:py-4 text-xs lg:text-sm text-gray-500 ',
+                            'whitespace-nowrap p-1.5 lg:px-3 lg:py-2 text-xs text-gray-500 ',
                             'border-b',
                           )}
                         >
@@ -158,7 +158,7 @@ function Table<T extends RowData>({
               </table>
               {!rows.length &&
                 (emptyMessage || (
-                  <div className="w-full py-12 font-semibold text-center">
+                  <div className="w-full py-12 font-semibold text-center text-xs">
                     No data to display!
                   </div>
                 ))}
