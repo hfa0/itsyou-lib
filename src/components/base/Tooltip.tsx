@@ -7,12 +7,12 @@ const Tooltip = ({
   headerClassName,
   wrapperClassName,
 }: {
-  title: string;
+  title?: string;
   children: ReactNode;
   headerClassName?: string;
   wrapperClassName?: string;
 }) => (
-  <div className={classNames(wrapperClassName, 'bg-white flex-1 flex flex-col h-full rounded w-60 shadow-md overflow-hidden')}>
+  <div className={classNames(wrapperClassName, 'bg-white flex-1 flex flex-col h-full rounded-md shadow-md overflow-hidden')}>
     {title && (
       <div
         className={classNames(

@@ -4,12 +4,6 @@ export interface IModalClassNames {
     root?: string;
     container?: string;
     innerContainer?: string;
-    transitionEnter?: string;
-    transitionEnterFrom?: string;
-    transitionEnterTo?: string;
-    transitionLeave?: string;
-    transitionLeaveFrom?: string;
-    transitionLeaveTo?: string;
     content?: string;
     panel?: string;
 }

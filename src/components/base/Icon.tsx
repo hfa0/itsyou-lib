@@ -72,6 +72,11 @@ import User from '../../assets/icons/user-01.svg';
 import Hourglass from '../../assets/icons/hourglass-03.svg';
 import Download from '../../assets/icons/download-01.svg';
 import Filter from '../../assets/icons/settings-03.svg';
+import Heart from '../../assets/icons/heart.svg';
+import Flag from '../../assets/icons/flag-01.svg';
+import Trash from '../../assets/icons/trash-01.svg';
+import Share from '../../assets/icons/share-06.svg';
+import Link from '../../assets/icons/link-external-02.svg';
 
 const map = {
   Upload,
@@ -147,6 +152,11 @@ const map = {
   Inbox,
   Hourglass,
   Filter,
+  Heart,
+  Flag,
+  Trash,
+  Share,
+  Link,
 };
 
 export type IconType = keyof typeof map;

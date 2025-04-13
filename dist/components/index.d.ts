@@ -26,6 +26,8 @@ export { default as Tag } from './base/Tag';
 export { default as TextArea, TextAreaProps, } from './base/TextArea';
 export { default as Tooltip } from './base/Tooltip';
 export { default as FileUploadDrag } from './base/FileUploadDrag';
+export { default as FileMultiUploadDrag } from './base/FileMultiUploadDrag';
 export { default as RadioGroup } from './base/RadioGroup';
+export { default as FooterMini } from './base/FooterMini';
 export { default as MatchableSortableTable, IMatchableSortableTableProps, } from './base/Table/MatchableSortableTable';
 export { TDashboardNav } from './base/DashboardNav';

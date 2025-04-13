@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 declare const Tooltip: ({ title, children, headerClassName, wrapperClassName, }: {
-    title: string;
+    title?: string;
     children: ReactNode;
     headerClassName?: string;
     wrapperClassName?: string;

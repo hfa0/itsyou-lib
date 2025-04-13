@@ -13,12 +13,7 @@ export interface IModalClassNames {
   root?: string;
   container?: string;
   innerContainer?: string;
-  transitionEnter?: string;
-  transitionEnterFrom?: string;
-  transitionEnterTo?: string;
-  transitionLeave?: string;
-  transitionLeaveFrom?: string;
-  transitionLeaveTo?: string;
+
   content?: string;
   panel?: string;
 }
@@ -53,6 +48,7 @@ function Modal(props: IProps) {
     setIsOpen(false);
     onClose();
   };
+  if (!isOpen) return null;
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
@@ -74,40 +70,30 @@ function Modal(props: IProps) {
           <div
             className={classNames(
               classes?.innerContainer,
-              'flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0',
+              'flex min-h-full justify-center p-4 text-center items-center sm:p-0',
             )}
           >
             <Transition.Child
               as={Fragment}
-              enter={classNames(
-                classes?.transitionEnter,
-                'ease-out duration-300',
-              )}
+              enter={classNames('ease-out duration-300')}
               enterFrom={classNames(
-                classes?.transitionEnterFrom,
                 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
               )}
               enterTo={classNames(
-                classes?.transitionEnterTo,
                 'opacity-100 translate-y-0 sm:scale-100',
               )}
-              leave={classNames(
-                classes?.transitionLeave,
-                'ease-in duration-200',
-              )}
+              leave={classNames('ease-in duration-200')}
               leaveFrom={classNames(
-                classes?.transitionLeaveFrom,
                 'opacity-100 translate-y-0 sm:scale-100',
               )}
               leaveTo={classNames(
-                classes?.transitionLeaveTo,
                 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
               )}
             >
               <Dialog.Panel
                 className={classNames(
                   classes?.panel,
-                  'relative transform rounded-lg bg-white dark:bg-dark text-left shadow-xl ring-1 ring-onLight/50 dark:ring-onDark/50 transition-all sm:w-full sm:max-w-lg',
+                  'w-full relative transform rounded-lg bg-white dark:bg-dark text-left shadow-xl ring-1 ring-onLight/50 dark:ring-onDark/50 transition-all sm:max-w-lg',
                 )}
               >
                 <div

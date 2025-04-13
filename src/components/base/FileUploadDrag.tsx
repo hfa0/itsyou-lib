@@ -72,7 +72,9 @@ const FileUploadDrag = ({
             <div className="h-full w-full border-3 border-dashed border-light/80 flex flex-col justify-center items-center rounded-lg p-12 space-y-2">
               <Icon name={'Camera'} size={40} />
               {text && (
-                <p className={'font-thin text-center'}>{text}</p>
+                <p className={'font-thin text-center'}>
+                  {text}
+                </p>
               )}
             </div>
           </FileUploader>

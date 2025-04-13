@@ -14,6 +14,10 @@ const IconButton = ({
   href,
   target,
   disabled,
+  className,
+  size,
+  iconClassName,
+  loaderColor = 'dark',
 }: {
   onClick?: MouseEventHandler<HTMLDivElement>;
   isLoading?: boolean;
@@ -21,11 +25,16 @@ const IconButton = ({
   href?: HTMLAttributeAnchorTarget;
   target?: string;
   disabled?: boolean;
+  className?: string;
+  iconClassName?: string;
+  size?: number;
+  loaderColor?: 'light' | 'dark';
 }) => {
   const Comp = (
     <div
       onClick={onClick}
       className={classNames(
+        className,
         'flex items-center justify-center w-9 h-9 border p-2 rounded hover:bg-gray-50 cursor-pointer shadow-sm text-gray-600 bg-white',
         {
           'pointer-events-none ': disabled || isLoading,
@@ -34,9 +43,13 @@ const IconButton = ({
       )}
     >
       {isLoading ? (
-        <Loader color={'dark'} />
+        <Loader size={size} color={loaderColor} />
       ) : (
-        <Icon name={icon} />
+        <Icon
+          size={size}
+          name={icon}
+          className={iconClassName}
+        />
       )}
     </div>
   );
