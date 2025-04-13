@@ -43,7 +43,10 @@ const IconButton = ({
       )}
     >
       {isLoading ? (
-        <Loader size={size} color={loaderColor} />
+        <Loader
+          size={Math.floor(size * 0.45)}
+          color={loaderColor}
+        />
       ) : (
         <Icon
           size={size}
