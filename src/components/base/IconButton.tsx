@@ -46,6 +46,7 @@ const IconButton = ({
         <Loader
           size={Math.floor(size * 0.45)}
           color={loaderColor}
+
         />
       ) : (
         <Icon

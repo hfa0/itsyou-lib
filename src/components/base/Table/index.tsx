@@ -95,7 +95,7 @@ function Table<T extends RowData>({
                               key={header.id}
                               className={classNames(
                                 classes?.th,
-                                'px-3 py-3.5 text-left text-sm font-semibold text-gray-500 whitespace-nowrap',
+                                'p-1.5 ld:px-3 lg:py-3.5 text-left text-xs lg:text-sm font-semibold text-gray-500 whitespace-nowrap',
                               )}
                               onClick={header.column.getToggleSortingHandler()}
                             >
@@ -142,7 +142,7 @@ function Table<T extends RowData>({
                           key={cell.id}
                           className={classNames(
                             classes?.td,
-                            'whitespace-nowrap px-3 py-4 text-sm text-gray-500 ',
+                            'whitespace-nowrap p-1.5 lg:px-3 lg:py-4 text-xs lg:text-sm text-gray-500 ',
                             'border-b',
                           )}
                         >
