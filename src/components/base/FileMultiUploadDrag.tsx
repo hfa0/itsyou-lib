@@ -18,9 +18,9 @@ const FileMultiUploadDrag = ({
   multiple?: boolean;
   isLoading?: boolean;
   loadingText?: string;
-  onChange?: (files: Blob[]) => void;
+  onChange?: (files: File[]) => void;
 }) => {
-  const handleChange = (files: Blob[]) => {
+  const handleChange = (files: File[]) => {
     onChange?.(files);
   };
   return (

@@ -3,6 +3,6 @@ declare const FileMultiUploadDrag: ({ onChange, accept, error, className, text, 
     multiple?: boolean;
     isLoading?: boolean;
     loadingText?: string;
-    onChange?: (files: Blob[]) => void;
+    onChange?: (files: File[]) => void;
 }) => import("react/jsx-runtime").JSX.Element;
 export default FileMultiUploadDrag;
