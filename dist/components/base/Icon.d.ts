@@ -78,6 +78,9 @@ declare const map: {
     Trash: React.FC<React.SVGProps<SVGSVGElement>>;
     Share: React.FC<React.SVGProps<SVGSVGElement>>;
     Link: React.FC<React.SVGProps<SVGSVGElement>>;
+    Lens: React.FC<React.SVGProps<SVGSVGElement>>;
+    Clipboard: React.FC<React.SVGProps<SVGSVGElement>>;
+    Browser: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 export type IconType = keyof typeof map;
 interface Props extends React.SVGAttributes<SVGElement> {

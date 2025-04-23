@@ -77,6 +77,9 @@ import Flag from '../../assets/icons/flag-01.svg';
 import Trash from '../../assets/icons/trash-01.svg';
 import Share from '../../assets/icons/share-06.svg';
 import Link from '../../assets/icons/link-external-02.svg';
+import Lens from '../../assets/icons/camera-lens.svg';
+import Clipboard from '../../assets/icons/clipboard.svg';
+import Browser from '../../assets/icons/browser.svg';
 
 const map = {
   Upload,
@@ -157,6 +160,9 @@ const map = {
   Trash,
   Share,
   Link,
+  Lens,
+  Clipboard,
+  Browser,
 };
 
 export type IconType = keyof typeof map;
