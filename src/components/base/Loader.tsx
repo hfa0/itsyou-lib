@@ -11,7 +11,7 @@ const Loader = ({
   return (
     <MoonLoader
       size={size}
-      color={color === 'dark' ? '#4A1FB8' : '#fff'}
+      color={color === 'dark' ? '#000000' : '#fff'}
     />
   );
 };
