@@ -11,7 +11,7 @@ const LogoLayout = ({
   name?: ReactNode;
 }) => {
   return (
-    <div className={'bg-white lg:h-screen'}>
+    <div className={'bg-white h-screen'}>
       {seo}
       <div className="py-12 lg:py-24 space-y-12 w-full sm:max-w-md mx-auto p-3">
         <div
