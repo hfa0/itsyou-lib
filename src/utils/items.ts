@@ -113,6 +113,9 @@ export const COUNTRIES = [
   { label: 'Deutschland', id: 'DE' },
   { label: 'Österreich', id: 'AT' },
   { label: 'Schweiz', id: 'CH' },
+  { label: 'Italien', id: 'IT' },
+  { label: 'Frankreich', id: 'FR' },
+  { label: 'Spanien', id: 'ES' },
 ];
 
 export const PERSONAL_TYPES = [
@@ -143,4 +146,22 @@ export const LOCATIONS = [
   { label: 'Hannover', id: 'hannover' },
   { label: 'Essen', id: 'essen' },
   { label: 'Dortmund', id: 'dortmund' },
+];
+
+export const LANGUAGES = [
+  { label: 'Deutsch', id: 'de' },
+  { label: 'Englisch', id: 'en' },
+  { label: 'Französisch', id: 'fr' },
+  { label: 'Spanisch', id: 'es' },
+  { label: 'Italienisch', id: 'it' },
+  { label: 'Niederländisch', id: 'nl' },
+  { label: 'Polnisch', id: 'pl' },
+  { label: 'Türkisch', id: 'tr' },
+  { label: 'Russisch', id: 'ru' },
+  { label: 'Arabisch', id: 'ar' },
+  { label: 'Chinesisch', id: 'zh' },
+  { label: 'Japanisch', id: 'ja' },
+  { label: 'Koreanisch', id: 'ko' },
+  { label: 'Griechisch', id: 'el' },
+  { label: 'Portugiesisch', id: 'pt' },
 ];
