@@ -38,3 +38,7 @@ export declare const LOCATIONS: {
     label: string;
     id: string;
 }[];
+export declare const LANGUAGES: {
+    label: string;
+    id: string;
+}[];
