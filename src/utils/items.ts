@@ -98,11 +98,6 @@ export const REQUEST_CONTRACTS = [
 
 export const REGISTRATION_CONTRACTS = [
   {
-    label: 'Mother-Agency Model Registration',
-    id: 'REGISTRATION_MOTHER_AGENCY',
-    de: 'Mutteragentur Vertrag',
-  },
-  {
     label: 'Freelance-Model Registration',
     id: 'REGISTRATION_MODEL_A',
     de: 'Freelance-Model Vertrag',
