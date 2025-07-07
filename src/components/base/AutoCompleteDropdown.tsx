@@ -93,7 +93,7 @@ function AutoCompleteDropdown({
           </ComboboxButton>
         </div>
 
-        <ComboboxOptions className="bg-white text-black border z-50 w-full absolute top-full left-0 shadow min-h-16 divide divide-y">
+        <ComboboxOptions className="bg-white text-black border z-50 w-full absolute top-full left-0 shadow min-h-64 max-h-96 overflow-y-scroll divide divide-y">
           {!data.length && (
             <div
               className={
@@ -108,7 +108,7 @@ function AutoCompleteDropdown({
             <ComboboxOption key={item.id} value={item}>
               <div
                 className={classNames(
-                  'grid hover:bg-gray-50 py-3 px-2 cursor-pointer min-h-64 max-h-96 overflow-y-scroll',
+                  'grid hover:bg-gray-50 py-3 px-2 cursor-pointer',
                   `grid-cols-${item.labels.length || 1}`,
                 )}
               >
