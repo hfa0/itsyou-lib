@@ -7,6 +7,8 @@ export interface AutoCompleteDropdownProps {
     onChangeDropdown?: (item?: IItemAutoComplete) => void;
     disableCloseOnClick?: boolean;
     title?: string;
+    disabled?: boolean;
+    defaultValue?: number;
     error?: string;
     hideError?: boolean;
     placeholder?: string;
@@ -14,5 +16,5 @@ export interface AutoCompleteDropdownProps {
     show?: number;
     queryFn: (items: IItemAutoComplete[], query: string) => IItemAutoComplete[];
 }
-declare function AutoCompleteDropdown({ placeholder, onChangeDropdown, items, queryFn, show, }: AutoCompleteDropdownProps): import("react/jsx-runtime").JSX.Element;
+declare function AutoCompleteDropdown({ placeholder, onChangeDropdown, items, queryFn, show, defaultValue, disabled, }: AutoCompleteDropdownProps): import("react/jsx-runtime").JSX.Element;
 export default AutoCompleteDropdown;

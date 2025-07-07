@@ -18,6 +18,8 @@ export interface AutoCompleteDropdownProps {
   onChangeDropdown?: (item?: IItemAutoComplete) => void;
   disableCloseOnClick?: boolean;
   title?: string;
+  disabled?: boolean;
+  defaultValue?: number;
   error?: string;
   hideError?: boolean;
   placeholder?: string;
@@ -35,9 +37,12 @@ function AutoCompleteDropdown({
   items,
   queryFn,
   show,
+  defaultValue,
+  disabled,
 }: AutoCompleteDropdownProps) {
-  const [selectedObject, setSelectedObject] =
-    useState<any>();
+  const [selectedObject, setSelectedObject] = useState<any>(
+    items[defaultValue],
+  );
   const [query, setQuery] = useState('');
   const [data, setData] = useState<IItemAutoComplete[]>(
     items.slice(0, show || items.length),
@@ -54,8 +59,16 @@ function AutoCompleteDropdown({
   useEffect(() => {
     setData(items.slice(0, show || items.length));
   }, [items]);
+
+  useEffect(() => {
+    setSelectedObject(items[defaultValue]);
+  }, [defaultValue]);
   return (
-    <div className="relative">
+    <div
+      className={classNames('relative', {
+        'pointer-events-none opacity-70': disabled,
+      })}
+    >
       <Combobox
         value={selectedObject}
         onChange={handleChange}
@@ -68,7 +81,7 @@ function AutoCompleteDropdown({
               'w-full rounded-md border  py-1.5 pr-8 pl-3 text-dark h-12 shadow',
               'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-dark',
             )}
-            displayValue={(person: any) =>
+            displayValue={(person: IItemAutoComplete) =>
               person ? `${person?.label}` : ''
             }
             onChange={(event) =>
