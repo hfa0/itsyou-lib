@@ -14,6 +14,14 @@ export interface IItem {
   labels?: string[];
 }
 
+export interface IItemAutoComplete {
+  id: string;
+  label: ReactNode;
+  labels?: string[];
+  row: any
+}
+
+
 export type ImageField = {
   type?: string;
   file: Blob;

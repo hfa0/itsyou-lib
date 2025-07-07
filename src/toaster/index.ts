@@ -13,4 +13,7 @@ export const toasterError = (msg: string) =>
 export const toasterSuccess = (msg: string) =>
   toast(msg, { type: 'success' });
 
+export const toasterWarning = (msg: string) =>
+  toast(msg, { type: 'warning' });
+
 export { ToastContainer };

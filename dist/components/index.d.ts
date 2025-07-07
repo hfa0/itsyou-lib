@@ -31,3 +31,4 @@ export { default as RadioGroup } from './base/RadioGroup';
 export { default as FooterMini } from './base/FooterMini';
 export { default as MatchableSortableTable, IMatchableSortableTableProps, } from './base/Table/MatchableSortableTable';
 export { TDashboardNav } from './base/DashboardNav';
+export { default as AutoCompleteDropdown, AutoCompleteDropdownProps, } from './base/AutoCompleteDropdown';

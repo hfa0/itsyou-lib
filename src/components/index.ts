@@ -46,3 +46,7 @@ export {
   IMatchableSortableTableProps,
 } from './base/Table/MatchableSortableTable';
 export { TDashboardNav } from './base/DashboardNav';
+export {
+  default as AutoCompleteDropdown,
+  AutoCompleteDropdownProps,
+} from './base/AutoCompleteDropdown';
