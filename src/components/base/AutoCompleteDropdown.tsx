@@ -108,7 +108,7 @@ function AutoCompleteDropdown({
             <ComboboxOption key={item.id} value={item}>
               <div
                 className={classNames(
-                  'grid hover:bg-gray-50 py-3 px-2 cursor-pointer',
+                  'grid hover:bg-gray-50 py-3 px-2 cursor-pointer min-h-64 max-h-96 overflow-y-scroll',
                   `grid-cols-${item.labels.length || 1}`,
                 )}
               >
