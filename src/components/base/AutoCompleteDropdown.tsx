@@ -39,13 +39,14 @@ function AutoCompleteDropdown({
   show,
   defaultValue,
   disabled,
+  wrapperClassName,
 }: AutoCompleteDropdownProps) {
   const [selectedObject, setSelectedObject] = useState<any>(
     items[defaultValue],
   );
   const [query, setQuery] = useState('');
   const [data, setData] = useState<IItemAutoComplete[]>(
-    items.slice(0, show || items.length),
+    items?.slice(0, show || items?.length) || [],
   );
   const handleChange = (ele: any) => {
     onChangeDropdown?.(ele);
@@ -57,7 +58,7 @@ function AutoCompleteDropdown({
   }, [query]);
 
   useEffect(() => {
-    setData(items.slice(0, show || items.length));
+    setData(items.slice(0, show || items?.length));
   }, [items]);
 
   useEffect(() => {
@@ -65,7 +66,7 @@ function AutoCompleteDropdown({
   }, [defaultValue]);
   return (
     <div
-      className={classNames('relative', {
+      className={classNames('relative h-12', wrapperClassName, {
         'pointer-events-none opacity-70': disabled,
       })}
     >
@@ -78,7 +79,7 @@ function AutoCompleteDropdown({
           <ComboboxInput
             placeholder={placeholder}
             className={classNames(
-              'w-full rounded-md border  py-1.5 pr-8 pl-3 text-dark h-12 shadow',
+              'w-full rounded-md border  py-1.5 pr-8 pl-3 text-dark h-full shadow',
               'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-dark',
             )}
             displayValue={(person: IItemAutoComplete) =>
@@ -109,10 +110,10 @@ function AutoCompleteDropdown({
               <div
                 className={classNames(
                   'grid hover:bg-gray-50 py-3 px-2 cursor-pointer',
-                  `grid-cols-${item.labels.length || 1}`,
+                  `grid-cols-${item.labels?.length || 1}`,
                 )}
               >
-                {!item.labels.length
+                {!item.labels?.length
                   ? item.label
                   : item.labels.map((key) => (
                       <div key={key}>{key}</div>
