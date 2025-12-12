@@ -57,6 +57,7 @@ export const PHOTO_TYPES: IItem[] = [
 
 export const CLIENT_CONTRACT_TYPES: IItem[] = [
   { label: 'Client Hostess A', id: 'CLIENT_HOSTESS_A' },
+  { label: 'Client Showroom A', id: 'CLIENT_SHOWROOM_A' },
 ];
 
 export const EYE_COLORS = [
