@@ -20,7 +20,8 @@ interface IProps<T extends RowData> {
     emptyMessage?: ReactNode;
     onRowClicked?(rowData: T): void;
     classes?: ITableClassNames;
+    renderAfter?: ReactNode;
 }
-declare function Table<T extends RowData>({ table, emptyMessage, onRowClicked, classes, }: IProps<T>): import("react/jsx-runtime").JSX.Element;
+declare function Table<T extends RowData>({ table, emptyMessage, onRowClicked, classes, renderAfter, }: IProps<T>): import("react/jsx-runtime").JSX.Element;
 export type { IProps as ITableProps };
 export default Table;

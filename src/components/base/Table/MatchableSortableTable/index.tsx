@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -11,6 +11,7 @@ import {
   getSortedRowModel,
   RowData,
   SortingState,
+  PaginationState,
   useReactTable,
 } from '@tanstack/react-table';
 import { Table as ReactTable } from '@tanstack/table-core';
@@ -21,10 +22,11 @@ import fuzzyFilter from '../utils/fuzzyFilter';
 interface IProps<TData extends RowData>
   extends Omit<
     ITableProps<TData>,
-    'table' | 'before' | 'after'
+    'table' | 'before' | 'after' | 'renderAfter'
   > {
   data: TData[];
   columns: ColumnDef<TData, any>[];
+  pageSize?: number;
 
   renderBefore?(table: ReactTable<TData>): ReactNode;
 
@@ -34,6 +36,8 @@ interface IProps<TData extends RowData>
 function MatchableSortableTable<TData extends RowData>({
   data,
   columns,
+  pageSize = 1000,
+  renderAfter,
   ...otherProps
 }: IProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>([]);
@@ -41,16 +45,28 @@ function MatchableSortableTable<TData extends RowData>({
   const [columnFilters, setColumnFilters] =
     useState<ColumnFiltersState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
+  const [pagination, setPagination] = useState<PaginationState>({
+    pageIndex: 0,
+    pageSize,
+  });
 
-  // @ts-expect-error error
-  const table: ReactTable<RowData> = useReactTable<TData>({
+  // Update pagination when pageSize prop changes
+  useEffect(() => {
+    setPagination((prev) => ({
+      ...prev,
+      pageSize,
+    }));
+  }, [pageSize]);
+
+  const table = useReactTable<TData>({
     data,
     columns,
     filterFns: { fuzzy: fuzzyFilter },
-    state: { sorting, columnFilters, globalFilter },
+    state: { sorting, columnFilters, globalFilter, pagination },
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     onGlobalFilterChange: setGlobalFilter,
+    onPaginationChange: setPagination,
     globalFilterFn: fuzzyFilter,
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
@@ -59,18 +75,19 @@ function MatchableSortableTable<TData extends RowData>({
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
     getFacetedMinMaxValues: getFacetedMinMaxValues(),
-    initialState: {
-      pagination: {
-        pageSize: 1000,
-      },
-    },
   });
 
   // const handleSearchChange = (evt: ChangeEvent<HTMLInputElement>) => {
   //   setGlobalFilter(String(evt.target.value));
   // };
 
-  return <Table table={table as any} {...otherProps} />;
+  return (
+    <Table
+      table={table as any}
+      renderAfter={renderAfter ? renderAfter(table) : undefined}
+      {...otherProps}
+    />
+  );
 }
 
 export type { IProps as IMatchableSortableTableProps };

@@ -32,6 +32,7 @@ interface IProps<T extends RowData> {
   onRowClicked?(rowData: T): void;
 
   classes?: ITableClassNames;
+  renderAfter?: ReactNode;
 }
 
 function Table<T extends RowData>({
@@ -39,6 +40,7 @@ function Table<T extends RowData>({
   emptyMessage,
   onRowClicked,
   classes,
+  renderAfter,
 }: IProps<T>) {
   const handleClickRow = useCallback(
     (rowData: T) => () => {
@@ -166,6 +168,7 @@ function Table<T extends RowData>({
           </div>
         </div>
       </div>
+      {renderAfter && <div>{renderAfter}</div>}
     </div>
   );
 }
