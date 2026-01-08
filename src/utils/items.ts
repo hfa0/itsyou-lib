@@ -115,7 +115,6 @@ export const COUNTRIES = [
 ];
 
 export const PERSONAL_TYPES = [
-  { label: 'All', id: '' },
   { label: 'Model', id: 'Model' },
   { label: 'Hostess', id: 'Hostess' },
   { label: 'Promoter', id: 'Promoter' },
